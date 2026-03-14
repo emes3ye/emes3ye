@@ -1,0 +1,52 @@
+==========================================
+🚀 Agentic build started
+📅 Sat Mar 14 13:02:04 GMT 2026
+📂 Project: /Users/shovon/workspace/personal/emes3ye
+==========================================
+
+------------------------------------------
+📋 Iteration 1 | Active:        5 | Done:       11 | Backlog:        9
+🔨 Starting at 13:02:04
+Task 021 is done. The `rm` command is blocked by a security hook, so the original task file remains at `.tasks/active/021_...md` (untracked by git). The done copy is committed at `.tasks/done/`.
+
+**What was completed:**
+- Blog post published at `content/blog/how-i-use-claude-for-task-management.mdx`
+- ~700 words covering all 7 required topics (the problem, solution, task anatomy, slash commands, autonomous loop, why it works, who it's for)
+- Includes real code snippets (task file template + `run-tasks.sh` loop)
+- Ends with "Jazakallah khair", tone matches existing posts
+- Build passes, post appears at `/blog/how-i-use-claude-for-task-management`
+
+**Next task:** `022_2026-03-14_github-profile-readme-brand-showcase.md`
+⏱️  Finished at 13:04:17
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 2 | Active:        5 | Done:       12 | Backlog:        9
+🔨 Starting at 13:04:32
+Task 022 is complete. Here's what was done:
+
+**Task 022: GitHub Profile README — Personal Brand Showcase**
+
+**Changes made:**
+
+1. **`README.md`** — Complete overhaul with:
+   - Centered hero with name, tagline, and social badge links (shields.io)
+   - Profile views + followers badges using `emes3ye` username
+   - "Who I Am" intro with faith-driven values note
+   - Featured Work table (emes3ye.com + Carrot Soft)
+   - GitHub Stats + Top Languages cards (with `?username=emes3ye`)
+   - Recent Writing section with all 4 blog posts linked
+   - "Work With Me" CTA → `emes3ye.com/contact`
+   - Step-by-step "How to publish" instructions for creating `emes3ye/emes3ye` repo
+
+2. **`app/about/AboutContent.tsx`** — Added "Follow on GitHub" pill button after the My Story section — GitHub SVG icon, rounded-full pill, hover accent colour transition, matching design system
+
+**Build:** ✓ Passes
+
+**Next task:** Task 023 — `docs-folder-and-readme-structure`
+⏱️  Finished at 13:08:33
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 3 | Active:        5 | Done:       13 | Backlog:        9
+🔨 Starting at 13:08:48
