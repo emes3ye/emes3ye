@@ -7,3 +7,50 @@
 ------------------------------------------
 📋 Iteration 1 | Active:        9 | Done:       16 | Backlog:        0
 🔨 Starting at 14:16:04
+**Task 012 complete.**
+
+**What was done:**
+- Created `components/ui/CalBookingEmbed.tsx` — a client component that loads Cal.com's embed script via Next.js `Script` with `lazyOnload` strategy, then initializes an inline month-view calendar for `emes3ye/30min`
+- Updated `app/contact/ContactContent.tsx` to import and render `CalBookingEmbed` in the "Book a Call" section, replacing the placeholder text
+- Build passes cleanly
+
+**Next task:** 013 — OG Image Generation (`app/contact/ContactContent.tsx` area, next lowest in active/)
+⏱️  Finished at 14:19:06
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 2 | Active:        9 | Done:       17 | Backlog:        0
+🔨 Starting at 14:19:21
+**Task 013 complete.** Here's what was done:
+
+- Created `app/blog/[slug]/opengraph-image.tsx` — Next.js 14 built-in OG image route using `next/og`'s `ImageResponse`. Each blog post gets a unique image (1200×630) featuring:
+  - Accent green (#2D5A3D) background matching the design system
+  - Post title in large white bold text
+  - Post tags as pills
+  - Author block: "Shafiul Islam / Founder · Carrot Soft" with copper (#C8956C) avatar
+  - Site name "emes3ye.com" in the header
+- Updated `generateMetadata` in `app/blog/[slug]/page.tsx` to explicitly set `og:image` and `twitter:image` pointing to the generated image route
+
+**Next pending task:** 014 — Wire Contact Email (depends on checking if task 010 is in done)
+⏱️  Finished at 14:21:57
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 3 | Active:        9 | Done:       18 | Backlog:        0
+🔨 Starting at 14:22:12
+Task 014 is complete. Here's a summary:
+
+**What was done:**
+- Replaced the placeholder `app/api/contact/route.ts` with a working implementation using Resend to send real emails to `hello@emes3ye.com`
+- Added in-memory rate limiting: max 5 requests per IP per hour (429 response when exceeded)
+- Email includes sender name, email (as reply-to), subject, and message in a branded HTML template
+- Full error handling for missing API key, Resend failures, and validation errors
+- `RESEND_API_KEY` read from env (`.env.local` already in `.gitignore`)
+
+**Next pending task:** 015 — Halal Investment Calculator
+⏱️  Finished at 14:24:12
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 4 | Active:        8 | Done:       19 | Backlog:        0
+🔨 Starting at 14:24:27
