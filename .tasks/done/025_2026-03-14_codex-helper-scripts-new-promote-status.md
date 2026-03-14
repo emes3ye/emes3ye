@@ -4,7 +4,7 @@
 - **Phase**: v1.1
 - **Priority**: p2-medium
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: none
 
 ## Description
@@ -20,12 +20,12 @@ All should take an overridable `CODEX_CMD` env var (default `codex`) and mirror 
 
 ## Acceptance Criteria
 
-- [ ] `bin/codex-new-task`, `bin/codex-promote-task`, `bin/codex-task-status` exist and are executable
-- [ ] Each script reads the respective `.claude/commands/*.md` prompt fresh per run
-- [ ] Arguments forwarded correctly to the prompt where applicable
-- [ ] Uses the same tool allowlist and `--max-turns` as `run-codex-tasks.sh`
-- [ ] Document usage examples in `docs/README.md` or a short `docs/codex-cli.md`
-- [ ] `npm run build` succeeds
+- [x] `bin/codex-new-task`, `bin/codex-promote-task`, `bin/codex-task-status` exist and are executable
+- [x] Each script reads the respective `.claude/commands/*.md` prompt fresh per run
+- [x] Arguments forwarded correctly to the prompt where applicable
+- [x] Uses the same tool allowlist and `--max-turns` as `run-codex-tasks.sh`
+- [x] Document usage examples in `docs/README.md` or a short `docs/codex-cli.md`
+- [x] `npm run build` succeeds
 
 ## Notes
 

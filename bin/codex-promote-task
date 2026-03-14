@@ -1,0 +1,37 @@
+#!/bin/bash
+# codex-promote-task — Move task(s) from .tasks/backlog/ to .tasks/active/
+# Usage: codex-promote-task [task-id | keyword | "all phase v1.1"]
+# Env:   CODEX_CMD  override the CLI to use (default: codex)
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+PROMPT_FILE="$SCRIPT_DIR/.claude/commands/promote-task.md"
+CMD="${CODEX_CMD:-codex}"
+
+if ! command -v "$CMD" &>/dev/null; then
+  echo "Error: '$CMD' not found. Install it or set CODEX_CMD to the correct binary." >&2
+  exit 1
+fi
+
+if [ ! -f "$PROMPT_FILE" ]; then
+  echo "Error: prompt file not found at $PROMPT_FILE" >&2
+  exit 1
+fi
+
+PROMPT="$(cat "$PROMPT_FILE")"
+
+if [ $# -gt 0 ]; then
+  ARGUMENTS="$*"
+  PROMPT="${PROMPT/\$ARGUMENTS/$ARGUMENTS}"
+fi
+
+cd "$SCRIPT_DIR"
+
+"$CMD" -p "$PROMPT" \
+  --allowedTools "Read" "Write" "Edit" \
+    "Bash(npm *)" "Bash(npx *)" "Bash(git *)" \
+    "Bash(curl *)" "Bash(mkdir *)" "Bash(cp *)" \
+    "Bash(mv *)" "Bash(kill *)" "Bash(cat *)" \
+    "Bash(ls *)" "Bash(sleep *)" "Bash(rm *)" \
+  --max-turns 50

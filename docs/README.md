@@ -130,3 +130,44 @@ Tasks live in `.tasks/` and flow through three stages:
 ```
 
 See `CLAUDE.md` → "Task System" section for the full workflow, file naming convention, and slash commands.
+
+---
+
+## Codex CLI Helper Scripts
+
+Three convenience wrappers live in `bin/` for running task-management commands ad-hoc via the Codex CLI (or `claude`). They re-read the prompt files fresh on each run and forward arguments as needed.
+
+| Script | Purpose |
+|---|---|
+| `bin/codex-new-task` | Create a new task in `.tasks/backlog/` |
+| `bin/codex-promote-task` | Move task(s) from `backlog/` → `active/` |
+| `bin/codex-task-status` | Print a full task board summary |
+
+### Usage
+
+```bash
+# Create a new task (interactive if no argument given)
+bin/codex-new-task "Add dark mode toggle to nav"
+
+# Promote task 027 to active
+bin/codex-promote-task 027
+
+# Promote all v1.2 backlog tasks at once
+bin/codex-promote-task "all phase v1.2"
+
+# Show the task board
+bin/codex-task-status
+```
+
+### Overriding the CLI binary
+
+By default the scripts call `codex`. Set `CODEX_CMD` to use a different binary (e.g. `claude`):
+
+```bash
+CODEX_CMD=claude bin/codex-new-task "Fix hero mobile layout"
+```
+
+### Requirements
+
+- The `codex` binary (or the value of `CODEX_CMD`) must be on your `PATH`.
+- Scripts fail with a clear error message if the binary is not found.
