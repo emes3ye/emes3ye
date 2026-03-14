@@ -1,0 +1,118 @@
+---
+title: "How I Use Claude for Task Management (No Jira Required)"
+date: "2026-03-14"
+excerpt: "A file-based task system inside your repo — how I replaced Jira, Linear, and Notion with markdown files and an autonomous AI loop."
+tags: ["claude-code", "agentic-development", "productivity", "task-management"]
+slug: "how-i-use-claude-for-task-management"
+---
+
+# How I Use Claude for Task Management (No Jira Required)
+
+Bismillah.
+
+I've used Jira. I've used Linear. I've used Notion databases with custom views and coloured labels. They're fine tools. But they all share the same fatal flaw: they live outside your codebase.
+
+Every time you move between your editor and your PM tool, you lose momentum. You context-switch. The idea in your head dissolves. And when you're a solo founder or a small team, that friction adds up to weeks of wasted energy per year.
+
+So when I built this site using Claude Code, I asked myself: what if the task system lived *inside the repo* — as plain files — and the AI read them directly?
+
+Here's what I came up with.
+
+## The Three-Folder System
+
+Everything lives under `.tasks/`:
+
+```
+.tasks/
+  backlog/   → ideas not yet ready to build
+  active/    → tasks to build right now
+  done/      → completed tasks (never modified)
+  templates/ → task-template.md
+  logs/      → build run logs
+```
+
+One markdown file per task. Files are named `NNN_YYYY-MM-DD_short-description.md` — the number prefix forces alphabetical sorting so Claude always picks up the lowest-numbered task first.
+
+## Anatomy of a Task File
+
+Every task file follows the same template:
+
+```markdown
+# Task: [Title]
+
+- **ID**: 012
+- **Phase**: mvp
+- **Priority**: p1-high
+- **Created**: 2026-03-10
+- **Completed**: pending
+- **Depends On**: 011
+
+## Description
+
+[What needs to be built]
+
+## Acceptance Criteria
+
+- [ ] Specific, verifiable criterion
+- [ ] Another criterion
+- [ ] `npm run build` succeeds
+- [ ] Responsive at 375px, 768px, 1280px
+```
+
+The `Depends On` field is the key to sequencing. Claude checks whether the dependency's file exists in `done/` before picking up a task. If it doesn't, the task is skipped. No human coordination needed.
+
+Acceptance criteria aren't aspirational — they're verifiable. "Make it look good" is useless. "Hero fills viewport, both CTAs link correctly, Lighthouse score > 90" gives Claude something concrete to check against.
+
+## The Slash Commands
+
+Four commands drive the workflow:
+
+- `/build-next-task` — picks the lowest-numbered unblocked task, implements it fully, verifies all criteria, commits, and moves the file to `done/`
+- `/new-task` — creates a new task file in `backlog/` from the template
+- `/promote-task` — moves a task from `backlog/` to `active/`
+- `/task-status` — shows a live board: active, backlog, done counts
+
+These aren't integrations or plugins. They're markdown files in `.claude/commands/` that contain natural language instructions. Claude reads them as prompts.
+
+## The Autonomous Loop
+
+This is where it gets interesting. `run-tasks.sh` is a bash script that runs Claude headless — no human in the loop:
+
+```bash
+for i in $(seq 1 $MAX_ITERATIONS); do
+    ACTIVE_COUNT=$(ls -1 .tasks/active/*.md 2>/dev/null | wc -l)
+
+    if [ "$ACTIVE_COUNT" -eq 0 ]; then
+        echo "✅ No more active tasks!"
+        break
+    fi
+
+    claude -p "Read .claude/commands/build-next-task.md and follow those instructions exactly." \
+        --allowedTools "Read" "Write" "Edit" "Bash(npm *)" "Bash(git *)" \
+        --max-turns 50
+done
+```
+
+Run the script, close your laptop, go to sleep. Claude picks up tasks one by one, builds each feature, runs `npm run build`, verifies acceptance criteria, commits, and moves to the next. In the morning, the site is shipped.
+
+This is not a demo. The site you're reading now was built exactly this way — 11 tasks from scaffold to full MVP, shipped overnight.
+
+## Why This Works Better Than Traditional PM Tools
+
+**Git-native history.** Every completed task file is committed alongside the code that implements it. You have a permanent record of what was built, when, and why — right in the repo. No external tool to sync.
+
+**Zero dependencies.** There's no API to configure, no webhook to break, no billing tier that limits your task count. It's files and folders.
+
+**Acceptance criteria double as QA.** When Claude verifies its own work against explicit, verifiable criteria before marking a task done, you get a built-in quality gate on every feature. It's not perfect, but it's far better than "ship and see."
+
+**Claude reads files natively.** This is the part that makes everything else work. Claude Code reads and writes files as its primary interface. A task file isn't an integration — it's just a file. You're working with the tool's native strengths.
+
+## Who This Is For
+
+Solo founders. Indie hackers. Small teams who want to ship without PM overhead.
+
+If you're managing a 50-person engineering org with complex cross-team dependencies, use Linear. But if you're one person trying to ship fast with clear intent, a folder of markdown files beats a SaaS tool every time.
+
+The entire system is visible in this repo. The task files are there. The slash commands are there. The script is there. Fork it, adapt it, make it yours.
+
+*Jazakallah khair for reading.*
