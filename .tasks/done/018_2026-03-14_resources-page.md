@@ -4,7 +4,7 @@
 - **Phase**: v1.2
 - **Priority**: p3-low
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: 010
 
 ## Description
@@ -13,13 +13,13 @@ Create a /resources page with curated recommendations. Sections: Recommended Boo
 
 ## Acceptance Criteria
 
-- [ ] Page renders at /resources
-- [ ] Organised into clear sections
-- [ ] Each resource has name, description, and link
-- [ ] External links open in new tabs
-- [ ] Page metadata set
-- [ ] Responsive at 375px, 768px, 1280px
-- [ ] `npm run build` succeeds
+- [x] Page renders at /resources
+- [x] Organised into clear sections
+- [x] Each resource has name, description, and link
+- [x] External links open in new tabs
+- [x] Page metadata set
+- [x] Responsive at 375px, 768px, 1280px
+- [x] `npm run build` succeeds
 
 ## Notes
 

@@ -94,3 +94,23 @@ Dark palette: `#0A0A0A` background, `#E5E5E5` foreground, accent/secondary uncha
 ------------------------------------------
 📋 Iteration 6 | Active:        7 | Done:       21 | Backlog:        0
 🔨 Starting at 14:35:30
+Task 017 complete. Here's what was done:
+
+**Reading Progress Bar** (`components/ui/ReadingProgressBar.tsx`)
+- Client component with `useScroll` + `scrollY` to track reading position
+- Fixed 3px bar at viewport top using `bg-accent` color
+- Smooth fill via inline `width` style
+- Added only to `app/blog/[slug]/page.tsx`
+
+**RSS Feed** (`app/feed.xml/route.ts`)
+- Static route serving valid RSS 2.0 XML
+- Includes all posts with title, link, GUID, description (excerpt), pubDate, and categories (tags)
+- Shows as `○ /feed.xml` (static) in build output
+
+**Next pending task:** `018_2026-03-14_resources-page.md`
+⏱️  Finished at 14:37:48
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 7 | Active:        6 | Done:       22 | Backlog:        0
+🔨 Starting at 14:38:03
