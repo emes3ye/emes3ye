@@ -4,7 +4,7 @@
 - **Phase**: v1.1
 - **Priority**: p1-high
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: 009
 
 ## Description
@@ -13,12 +13,12 @@ Replace the placeholder API route (app/api/contact/route.ts) with a real email s
 
 ## Acceptance Criteria
 
-- [ ] Form submissions send a real email via Resend
-- [ ] Email includes sender name, email, subject, and message
-- [ ] Rate limiting prevents more than 5 submissions per IP per hour
-- [ ] Error handling for failed sends
-- [ ] Environment variable for Resend API key (RESEND_API_KEY)
-- [ ] `npm run build` succeeds
+- [x] Form submissions send a real email via Resend
+- [x] Email includes sender name, email, subject, and message
+- [x] Rate limiting prevents more than 5 submissions per IP per hour
+- [x] Error handling for failed sends
+- [x] Environment variable for Resend API key (RESEND_API_KEY)
+- [x] `npm run build` succeeds
 
 ## Notes
 
