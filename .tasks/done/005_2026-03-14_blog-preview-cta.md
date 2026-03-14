@@ -4,7 +4,7 @@
 - **Phase**: mvp
 - **Priority**: p0-critical
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: 004
 
 ## Description
@@ -17,14 +17,14 @@ Add two final sections to the home page:
 
 ## Acceptance Criteria
 
-- [ ] 3 blog cards render in a row on desktop, stack on mobile
-- [ ] Each card shows date, title, excerpt, and "Read →" link
-- [ ] "View all posts →" links to /blog
-- [ ] CTA section has #2D5A3D background with white text
-- [ ] "Start a Conversation" button links to /contact
-- [ ] Both sections have scroll animations
-- [ ] Responsive at 375px, 768px, 1280px
-- [ ] `npm run build` succeeds
+- [x] 3 blog cards render in a row on desktop, stack on mobile
+- [x] Each card shows date, title, excerpt, and "Read →" link
+- [x] "View all posts →" links to /blog
+- [x] CTA section has #2D5A3D background with white text
+- [x] "Start a Conversation" button links to /contact
+- [x] Both sections have scroll animations
+- [x] Responsive at 375px, 768px, 1280px
+- [x] `npm run build` succeeds
 
 ## Notes
 
