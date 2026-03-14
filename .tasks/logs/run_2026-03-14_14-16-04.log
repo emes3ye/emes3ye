@@ -54,3 +54,23 @@ Task 014 is complete. Here's a summary:
 ------------------------------------------
 📋 Iteration 4 | Active:        8 | Done:       19 | Backlog:        0
 🔨 Starting at 14:24:27
+Clean. Task 015 is complete. Here's the summary:
+
+**Task 015: Halal Investment Calculator** — Done
+
+**What was built:**
+- `/tools/halal-calculator` page with a fully interactive calculator
+- Inputs: investment amount (£), annual return rate (%), time period (years)
+- Compound growth calculation framed as profit-sharing (no riba)
+- Year-by-year breakdown table
+- Educational section on Islamic finance principles (sukuk, halal REITs, equity funds)
+- Email capture gate ("Get Full Report") with name + email fields and success state
+- Scroll fade-in animations via Intersection Observer
+
+**Next pending task:** 016 — Dark Mode
+⏱️  Finished at 14:31:01
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 5 | Active:        8 | Done:       20 | Backlog:        0
+🔨 Starting at 14:31:16
