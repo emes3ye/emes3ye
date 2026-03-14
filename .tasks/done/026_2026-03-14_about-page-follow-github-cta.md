@@ -4,7 +4,7 @@
 - **Phase**: v1.1
 - **Priority**: p3-low
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: none
 
 ## Description
@@ -13,12 +13,12 @@ Add a subtle "Follow on GitHub" CTA on the About page near the intro paragraph. 
 
 ## Acceptance Criteria
 
-- [ ] CTA appears on `/about` above the fold or shortly after the opening paragraph
-- [ ] Visual style matches design system (fonts, colors, spacing)
-- [ ] Hover/focus states present and accessible
-- [ ] No duplication with footer; CTA is additive and not intrusive
-- [ ] `npm run build` succeeds
-- [ ] Responsive at 375px, 768px, 1280px
+- [x] CTA appears on `/about` above the fold or shortly after the opening paragraph
+- [x] Visual style matches design system (fonts, colors, spacing)
+- [x] Hover/focus states present and accessible
+- [x] No duplication with footer; CTA is additive and not intrusive
+- [x] `npm run build` succeeds
+- [x] Responsive at 375px, 768px, 1280px
 
 ## Notes
 
