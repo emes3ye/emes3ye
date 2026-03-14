@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
+import NewsletterSignup from "@/components/sections/NewsletterSignup";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -25,6 +26,10 @@ export default function BlogPage() {
         <p className="text-muted text-xl">
           On halal finance, technology, entrepreneurship, and personal growth.
         </p>
+      </div>
+
+      <div className="mb-16">
+        <NewsletterSignup />
       </div>
 
       <div className="divide-y divide-black/5">
