@@ -4,7 +4,7 @@
 - **Phase**: mvp
 - **Priority**: p0-critical
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: 003
 
 ## Description
@@ -20,15 +20,15 @@ Each card: numbered label (01-04) in accent color, bold heading, one-line descri
 
 ## Acceptance Criteria
 
-- [ ] 4 venture cards render in a 2x2 grid on desktop
-- [ ] Cards stack to single column on mobile
-- [ ] Each card has number, name, and description
-- [ ] Hover effect works (lift + shadow)
-- [ ] Carrot Soft card links to carrotsoft.uk in new tab with external link icon
-- [ ] "See all ventures →" links to /ventures
-- [ ] Staggered scroll animation (each card fades in with slight delay)
-- [ ] Responsive at 375px, 768px, 1280px
-- [ ] `npm run build` succeeds
+- [x] 4 venture cards render in a 2x2 grid on desktop
+- [x] Cards stack to single column on mobile
+- [x] Each card has number, name, and description
+- [x] Hover effect works (lift + shadow)
+- [x] Carrot Soft card links to carrotsoft.uk in new tab with external link icon
+- [x] "See all ventures →" links to /ventures
+- [x] Staggered scroll animation (each card fades in with slight delay)
+- [x] Responsive at 375px, 768px, 1280px
+- [x] `npm run build` succeeds
 
 ## Notes
 
