@@ -4,7 +4,7 @@
 - **Phase**: v1.1
 - **Priority**: p3-low
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: 008
 
 ## Description
@@ -13,11 +13,11 @@ Add a reading progress bar to individual blog post pages (thin bar at the top of
 
 ## Acceptance Criteria
 
-- [ ] Progress bar appears on blog post pages only
-- [ ] Bar fills proportionally as user scrolls through post
-- [ ] RSS feed accessible at /feed.xml
-- [ ] RSS feed includes all published posts with title, date, excerpt
-- [ ] `npm run build` succeeds
+- [x] Progress bar appears on blog post pages only
+- [x] Bar fills proportionally as user scrolls through post
+- [x] RSS feed accessible at /feed.xml
+- [x] RSS feed includes all published posts with title, date, excerpt
+- [x] `npm run build` succeeds
 
 ## Notes
 

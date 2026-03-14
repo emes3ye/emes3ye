@@ -74,3 +74,23 @@ Clean. Task 015 is complete. Here's the summary:
 ------------------------------------------
 📋 Iteration 5 | Active:        8 | Done:       20 | Backlog:        0
 🔨 Starting at 14:31:16
+**Task 016: Dark Mode Toggle — Complete**
+
+What was implemented:
+
+- **`tailwind.config.ts`** — Added `darkMode: 'class'`, switched all color tokens to reference CSS variables so existing `bg-background`, `text-foreground`, etc. classes automatically switch themes
+- **`app/globals.css`** — Defined `:root` (light) and `.dark` CSS variable sets; updated `blog-prose` to use variables instead of hardcoded hex values
+- **`components/ThemeScript.tsx`** — Inline `<script>` injected into `<head>` that reads `localStorage` and `prefers-color-scheme` before paint, preventing flash of wrong theme
+- **`components/ThemeProvider.tsx`** — Client context component managing theme state, persisting to `localStorage`, and listening for system preference changes
+- **`app/layout.tsx`** — Added `ThemeScript` to `<head>` and wrapped app in `ThemeProvider`; added `suppressHydrationWarning` on `<html>`
+- **`components/layout/Navbar.tsx`** — Added sun/moon icon toggle button in the navbar (both desktop and mobile), wired to `useTheme()` context
+
+Dark palette: `#0A0A0A` background, `#E5E5E5` foreground, accent/secondary unchanged.
+
+**Next task:** 017 — Blog progress bar + RSS feed.
+⏱️  Finished at 14:35:15
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 6 | Active:        7 | Done:       21 | Backlog:        0
+🔨 Starting at 14:35:30

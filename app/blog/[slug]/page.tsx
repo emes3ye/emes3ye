@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import BlogPostContent from "./BlogPostContent";
+import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 type Props = {
   params: { slug: string };
@@ -42,6 +43,8 @@ export default function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
+    <>
+      <ReadingProgressBar />
     <div className="max-w-2xl mx-auto px-6 py-16 md:py-24">
       {/* Back link */}
       <Link
@@ -82,5 +85,6 @@ export default function BlogPostPage({ params }: Props) {
       {/* MDX content */}
       <BlogPostContent content={post.content} />
     </div>
+    </>
   );
 }
