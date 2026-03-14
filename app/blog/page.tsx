@@ -31,7 +31,7 @@ export default function BlogPage() {
         {posts.map((post) => (
           <article key={post.slug} className="py-10 group">
             <div className="flex flex-wrap items-center gap-3 mb-3">
-              <time className="text-xs text-muted font-medium tracking-wide uppercase">
+              <time dateTime={post.date} className="text-xs text-muted font-medium tracking-wide uppercase">
                 {new Date(post.date).toLocaleDateString("en-GB", {
                   day: "numeric",
                   month: "long",

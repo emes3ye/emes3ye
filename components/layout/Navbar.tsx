@@ -18,7 +18,7 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-heading font-700 text-sm tracking-widest text-foreground uppercase"
+          className="font-heading font-bold text-sm tracking-widest text-foreground uppercase"
         >
           Shafiul Islam
         </Link>

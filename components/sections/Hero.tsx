@@ -5,13 +5,11 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
       {/* Decorative gradient orbs */}
       <div
-        className="absolute top-1/4 -left-32 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none"
-        style={{ background: "#2D5A3D" }}
+        className="absolute top-1/4 -left-32 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none bg-accent"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full opacity-15 blur-3xl pointer-events-none"
-        style={{ background: "#C8956C" }}
+        className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full opacity-15 blur-3xl pointer-events-none bg-secondary"
         aria-hidden="true"
       />
 

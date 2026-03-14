@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, subject, message } = body;
+    const { name, email, message } = body as { name: string; email: string; subject: string; message: string };
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -21,8 +21,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    console.log("[Contact Form Submission]", { name, email, subject, message });
-
+    // TODO: send email via Resend/SendGrid (task 014)
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json(

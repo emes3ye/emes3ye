@@ -3,28 +3,14 @@
 import Link from "next/link";
 import { useInView } from "@/hooks/useInView";
 
-const posts = [
-  {
-    date: "March 10, 2026",
-    title: "How I Built My Website While I Slept",
-    excerpt:
-      "Using agentic AI to ship a full personal brand site overnight — and what I learned from it.",
-  },
-  {
-    date: "March 5, 2026",
-    title: "Why Halal Investing Is the Future",
-    excerpt:
-      "The financial world is waking up to ethical investing. Here's why halal principles lead the way.",
-  },
-  {
-    date: "February 28, 2026",
-    title: "Faith, Fitness & Focus: My Daily Routine",
-    excerpt:
-      "How I structure my mornings to stay grounded, productive, and aligned with my values.",
-  },
-];
+type PreviewPost = {
+  slug: string;
+  date: string;
+  title: string;
+  excerpt: string;
+};
 
-export default function BlogPreview() {
+export default function BlogPreview({ posts }: { posts: PreviewPost[] }) {
   const { ref, inView } = useInView();
 
   return (
@@ -44,14 +30,18 @@ export default function BlogPreview() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         {posts.map((post, i) => (
           <article
-            key={i}
+            key={post.slug}
             className={`flex flex-col gap-3 transition-all duration-700 ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ transitionDelay: inView ? `${i * 100}ms` : "0ms" }}
           >
-            <time className="text-xs text-muted font-medium tracking-wide uppercase">
-              {post.date}
+            <time dateTime={post.date} className="text-xs text-muted font-medium tracking-wide uppercase">
+              {new Date(post.date).toLocaleDateString("en-GB", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
             </time>
             <h3 className="font-heading font-bold text-lg text-foreground leading-snug">
               {post.title}
@@ -60,7 +50,7 @@ export default function BlogPreview() {
               {post.excerpt}
             </p>
             <Link
-              href="/blog"
+              href={`/blog/${post.slug}`}
               className="text-accent font-heading font-semibold text-sm hover:gap-2 inline-flex items-center gap-1 transition-all duration-200 w-fit"
             >
               Read <span aria-hidden="true">→</span>

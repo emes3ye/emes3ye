@@ -53,7 +53,7 @@ export default function VenturesPreview() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {ventures.map((venture, i) => {
-            const cardClasses = `group rounded-2xl border border-black/8 bg-background p-8 flex flex-col gap-4 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ${
+            const cardClasses = `group rounded-2xl border border-black/10 bg-background p-8 flex flex-col gap-4 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ${
               inView
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"

@@ -51,7 +51,7 @@ export default function BlogPostPage({ params }: Props) {
       {/* Header */}
       <header className="mb-12">
         <div className="flex flex-wrap items-center gap-3 mb-4">
-          <time className="text-xs text-muted font-medium tracking-wide uppercase">
+          <time dateTime={post.date} className="text-xs text-muted font-medium tracking-wide uppercase">
             {new Date(post.date).toLocaleDateString("en-GB", {
               day: "numeric",
               month: "long",

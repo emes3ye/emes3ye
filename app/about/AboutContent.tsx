@@ -117,7 +117,7 @@ export default function AboutContent() {
           {values.map((value, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-black/8 bg-background p-7 flex flex-col gap-3"
+              className="rounded-2xl border border-black/10 bg-background p-7 flex flex-col gap-3"
             >
               <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
                 <span className="font-heading font-bold text-accent text-xs">

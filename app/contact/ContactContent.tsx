@@ -122,10 +122,11 @@ export default function ContactContent() {
           ) : (
             <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
               <div>
-                <label className="block text-sm font-heading font-semibold text-foreground mb-1.5">
+                <label htmlFor="name" className="block text-sm font-heading font-semibold text-foreground mb-1.5">
                   Name <span className="text-secondary">*</span>
                 </label>
                 <input
+                  id="name"
                   type="text"
                   placeholder="Your name"
                   value={form.name}
@@ -138,10 +139,11 @@ export default function ContactContent() {
               </div>
 
               <div>
-                <label className="block text-sm font-heading font-semibold text-foreground mb-1.5">
+                <label htmlFor="email" className="block text-sm font-heading font-semibold text-foreground mb-1.5">
                   Email <span className="text-secondary">*</span>
                 </label>
                 <input
+                  id="email"
                   type="email"
                   placeholder="your@email.com"
                   value={form.email}
@@ -154,10 +156,11 @@ export default function ContactContent() {
               </div>
 
               <div>
-                <label className="block text-sm font-heading font-semibold text-foreground mb-1.5">
+                <label htmlFor="subject" className="block text-sm font-heading font-semibold text-foreground mb-1.5">
                   Subject
                 </label>
                 <select
+                  id="subject"
                   value={form.subject}
                   onChange={(e) => setForm({ ...form, subject: e.target.value })}
                   className={inputClass}
@@ -171,10 +174,11 @@ export default function ContactContent() {
               </div>
 
               <div>
-                <label className="block text-sm font-heading font-semibold text-foreground mb-1.5">
+                <label htmlFor="message" className="block text-sm font-heading font-semibold text-foreground mb-1.5">
                   Message <span className="text-secondary">*</span>
                 </label>
                 <textarea
+                  id="message"
                   rows={6}
                   placeholder="Tell me what you have in mind..."
                   value={form.message}

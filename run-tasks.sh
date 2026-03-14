@@ -68,8 +68,15 @@ cd "$PROJECT_DIR"
 
 if npm run build 2>&1 | tee -a "$LOG_FILE"; then
     echo "✅ Final build: PASSED"                  | tee -a "$LOG_FILE"
+    echo ""                                        | tee -a "$LOG_FILE"
+    echo "🚀 Pushing to origin..."                 | tee -a "$LOG_FILE"
+    if git push origin main 2>&1 | tee -a "$LOG_FILE"; then
+        echo "✅ Push: SUCCESS — Vercel deploy triggered" | tee -a "$LOG_FILE"
+    else
+        echo "❌ Push: FAILED — check git remote and auth" | tee -a "$LOG_FILE"
+    fi
 else
-    echo "❌ Final build: FAILED"                  | tee -a "$LOG_FILE"
+    echo "❌ Final build: FAILED — skipping push"  | tee -a "$LOG_FILE"
 fi
 
 # Summary
