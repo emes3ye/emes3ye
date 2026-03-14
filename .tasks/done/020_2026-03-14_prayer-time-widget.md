@@ -4,7 +4,7 @@
 - **Phase**: v1.2
 - **Priority**: p3-low
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: 010
 
 ## Description
@@ -13,11 +13,11 @@ Add a subtle prayer time display in the footer showing the next salah time based
 
 ## Acceptance Criteria
 
-- [ ] Footer shows next prayer name and time
-- [ ] Uses visitor location or falls back to London
-- [ ] Updates dynamically
-- [ ] Doesn't break layout if API fails
-- [ ] `npm run build` succeeds
+- [x] Footer shows next prayer name and time
+- [x] Uses visitor location or falls back to London
+- [x] Updates dynamically
+- [x] Doesn't break layout if API fails
+- [x] `npm run build` succeeds
 
 ## Notes
 
