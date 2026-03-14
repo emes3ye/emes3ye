@@ -4,7 +4,7 @@
 - **Phase**: mvp
 - **Priority**: p0-critical
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: 002
 
 ## Description
@@ -20,15 +20,15 @@ Add an "About" preview section below the hero on the home page.
 
 ## Acceptance Criteria
 
-- [ ] Section renders below the hero
-- [ ] Heading, paragraph, and link all display correctly
-- [ ] "Read my full story →" navigates to /about
-- [ ] Two-column layout on desktop (60/40 split)
-- [ ] Stacks vertically on mobile
-- [ ] Scroll animation triggers when section enters viewport
-- [ ] Placeholder image area has accent-colored decorative element
-- [ ] Responsive at 375px, 768px, 1280px
-- [ ] `npm run build` succeeds
+- [x] Section renders below the hero
+- [x] Heading, paragraph, and link all display correctly
+- [x] "Read my full story →" navigates to /about
+- [x] Two-column layout on desktop (60/40 split)
+- [x] Stacks vertically on mobile
+- [x] Scroll animation triggers when section enters viewport
+- [x] Placeholder image area has accent-colored decorative element
+- [x] Responsive at 375px, 768px, 1280px
+- [x] `npm run build` succeeds
 
 ## Notes
 
