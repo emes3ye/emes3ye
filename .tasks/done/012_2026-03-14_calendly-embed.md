@@ -4,7 +4,7 @@
 - **Phase**: v1.1
 - **Priority**: p2-medium
 - **Created**: 2026-03-14
-- **Completed**: pending
+- **Completed**: 2026-03-14
 - **Depends On**: 010
 
 ## Description
@@ -13,10 +13,10 @@ Replace the "Book a call" placeholder link on the contact page with an embedded 
 
 ## Acceptance Criteria
 
-- [ ] Booking widget renders on contact page
-- [ ] Visitors can select a time slot and book
-- [ ] Responsive and doesn't break layout
-- [ ] `npm run build` succeeds
+- [x] Booking widget renders on contact page
+- [x] Visitors can select a time slot and book
+- [x] Responsive and doesn't break layout
+- [x] `npm run build` succeeds
 
 ## Notes
 

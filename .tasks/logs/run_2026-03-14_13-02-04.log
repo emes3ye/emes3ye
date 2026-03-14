@@ -50,3 +50,118 @@ Task 022 is complete. Here's what was done:
 ------------------------------------------
 📋 Iteration 3 | Active:        5 | Done:       13 | Backlog:        9
 🔨 Starting at 13:08:48
+**Task 023 complete.**
+
+- Created `docs/README.md` with full developer documentation (stack, setup commands, project structure, blog post guide, design system reference, task system pointer)
+- Root `README.md` already contained the profile content from Task 022
+- Build passes, no pages/components changed
+
+**Next pending tasks** (from `.tasks/active/`):
+- **025** — Codex helper scripts (new-task, promote-task, task-status)
+- **026** — About page "Follow on GitHub" CTA
+⏱️  Finished at 13:11:37
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 4 | Active:        5 | Done:       14 | Backlog:        9
+🔨 Starting at 13:11:52
+Both tasks completed. Here's the summary:
+
+---
+
+**Task 025 — Codex Helper Scripts** ✅
+- Created `bin/codex-new-task`, `bin/codex-promote-task`, `bin/codex-task-status` (all `chmod +x` via `git update-index`)
+- Each reads its respective `.claude/commands/*.md` prompt fresh per run
+- `$@` arguments substituted into `$ARGUMENTS` placeholder in the prompt
+- Uses same `--allowedTools` and `--max-turns 50` as `run-tasks.sh`
+- `CODEX_CMD` env var defaults to `codex`, overridable (e.g. `CODEX_CMD=claude`)
+- Usage documented in `docs/README.md`
+
+**Task 026 — About Page "Follow on GitHub" CTA** ✅
+- Moved the GitHub CTA from after "My Story" to just below the page header — now visible above the fold
+- Added `focus:ring` styles for keyboard accessibility
+- Removed the old duplicate placement
+
+**No more pending tasks** in `.tasks/active/` (the remaining files 021–023 are stale copies; their counterparts are already in `.tasks/done/`).
+⏱️  Finished at 13:42:05
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 5 | Active:        3 | Done:       16 | Backlog:        9
+🔨 Starting at 13:42:20
+**All tasks blocked or complete.**
+
+The `.tasks/active/` directory had three stale duplicate files (021, 022, 023) — all already completed and present in `.tasks/done/`. They were cleaned up and committed. No new tasks are pending in active/.
+
+To start new work, promote tasks from `.tasks/backlog/` using `/promote-task`.
+⏱️  Finished at 13:44:03
+😴 Pausing 15s...
+
+------------------------------------------
+✅ No more active tasks!
+📊 Done:       16 | Backlog:        9
+
+==========================================
+🔍 Final build verification...
+
+> emes3ye@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+(node:82689) ExperimentalWarning: CommonJS module /Users/shovon/workspace/personal/emes3ye/node_modules/tailwindcss/lib/lib/load-config.js is loading ES Module /Users/shovon/workspace/personal/emes3ye/tailwind.config.ts using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/17) ...
+   Generating static pages (4/17) 
+   Generating static pages (8/17) 
+   Generating static pages (12/17) 
+ ✓ Generating static pages (17/17)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                       Size     First Load JS
+┌ ○ /                                             3.51 kB        99.5 kB
+├ ○ /_not-found                                   138 B          87.4 kB
+├ ○ /about                                        3.22 kB        99.2 kB
+├ ƒ /api/contact                                  0 B                0 B
+├ ƒ /api/newsletter                               0 B                0 B
+├ ○ /blog                                         1.47 kB        97.4 kB
+├ ● /blog/[slug]                                  178 B          96.1 kB
+├   ├ /blog/how-i-use-claude-for-task-management
+├   ├ /blog/how-i-built-my-website-while-i-slept
+├   ├ /blog/why-halal-investing-is-the-future
+├   └ /blog/faith-fitness-focus-my-daily-routine
+├ ○ /contact                                      2.28 kB        89.5 kB
+├ ○ /robots.txt                                   0 B                0 B
+├ ○ /sitemap.xml                                  0 B                0 B
+└ ○ /ventures                                     2.47 kB        98.4 kB
++ First Load JS shared by all                     87.3 kB
+  ├ chunks/117-baab43fc83142998.js                31.7 kB
+  ├ chunks/fd9d1056-87da80e0c187477b.js           53.6 kB
+  └ other shared chunks (total)                   1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+✅ Final build: PASSED
+
+🚀 Pushing to origin...
+To github.com:emes3ye/emes3ye.git
+   201b3ff..4aefe2e  main -> main
+✅ Push: SUCCESS — Vercel deploy triggered
+
+==========================================
+🏁 BUILD RUN COMPLETE
+📅 Sat Mar 14 13:44:37 GMT 2026
+📁 Done:          16
+📁 Active:         0
+📁 Backlog:        9
+📊 Log:     /Users/shovon/workspace/personal/emes3ye/.tasks/logs/run_2026-03-14_13-02-04.log
+==========================================

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import CalBookingEmbed from "@/components/ui/CalBookingEmbed";
 
 const subjects = [
   "Business Inquiry",
@@ -235,12 +236,13 @@ export default function ContactContent() {
             </div>
 
             <div>
-              <p className="text-xs font-heading font-semibold text-foreground/40 uppercase tracking-widest mb-2">
+              <p className="text-xs font-heading font-semibold text-foreground/40 uppercase tracking-widest mb-3">
                 Book a Call
               </p>
-              <p className="text-sm text-muted">
-                Scheduling link coming soon — use the form for now.
+              <p className="text-sm text-muted mb-4">
+                Pick a time that works for you — no back-and-forth needed.
               </p>
+              <CalBookingEmbed />
             </div>
           </div>
         </div>
