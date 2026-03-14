@@ -1,0 +1,41 @@
+---
+title: "How I Built My Website While I Slept"
+date: "2026-03-10"
+excerpt: "Using agentic AI to ship a full personal brand site overnight — and what I learned from it."
+tags: ["agentic-development", "claude-code", "tech"]
+slug: "how-i-built-my-website-while-i-slept"
+---
+
+# How I Built My Website While I Slept
+
+Bismillah.
+
+I'm a software engineer at Amazon with 8+ years of experience. I also run Carrot Soft, a bootstrap software company. I needed a personal brand website — but I didn't want to spend weeks building it. So I taught an AI to build it for me. Autonomously. While I slept.
+
+This isn't clickbait. This is a practical guide to agentic development — a new way of building software where you define what you want, set up the right structure, and let AI agents execute the work without you sitting there prompting every step.
+
+## What Is Agentic Development?
+
+Traditional AI-assisted coding looks like this: you type a prompt, AI writes some code, you review it, you type another prompt. Repeat 200 times. Agentic development flips this entirely.
+
+You set up context — a file that tells the AI everything about your project — and tasks: a structured list of what needs to be built, with clear acceptance criteria. Then you step away. The AI reads the context, picks up the first task, implements it, verifies it works, commits the code, and moves to the next task.
+
+The tool I used is Claude Code — Anthropic's command-line coding agent. It's not a chatbot. It reads your codebase, writes files, runs terminal commands, and manages git — all from natural language instructions.
+
+## The Three Pillars
+
+**CLAUDE.md** gives the AI persistent memory across sessions. It includes your stack, design system, architecture, and workflow rules. Without it, every session starts from scratch.
+
+**Task files** break work into atomic, verifiable units. Each task has a clear description and acceptance criteria — specific, verifiable checkboxes. The AI goes through each one and only marks it done when the build passes.
+
+**Headless mode** (`-p` flag) lets Claude Code run non-interactively from scripts. Combined with pre-approved tools, you get a fully autonomous agent that can run overnight.
+
+## The Result
+
+Ten tasks. From scaffold to SEO polish. The site you're reading now was built exactly this way — clean, minimal, responsive, and shipped in a single night.
+
+The lesson: be specific in your acceptance criteria. "Make it look good" is useless. "Hero fills viewport, both CTAs link correctly, responsive at 375px" gives the AI something verifiable to aim for.
+
+Agentic development isn't about replacing developers. I am a developer. It's about multiplying what one person can do.
+
+*Jazakallah khair for reading.*
