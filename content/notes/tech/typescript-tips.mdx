@@ -1,0 +1,96 @@
+---
+title: "TypeScript Patterns I Keep Returning To"
+description: "Practical TypeScript techniques for everyday use — no academic theory, just stuff that works."
+category: "Tech"
+updatedAt: "2026-03-14"
+---
+
+These are patterns I reach for regularly. Not exhaustive — just the ones that earn their keep.
+
+## Discriminated Unions for State
+
+Instead of boolean flags that get out of sync:
+
+```typescript
+type RequestState =
+  | { status: "idle" }
+  | { status: "loading" }
+  | { status: "success"; data: User }
+  | { status: "error"; message: string };
+```
+
+TypeScript narrows the type in each branch. No more `data` being undefined when `status === "loading"`.
+
+## Satisfies Operator
+
+Validate structure without widening the type:
+
+```typescript
+const palette = {
+  red: [255, 0, 0],
+  green: "#00ff00",
+} satisfies Record<string, string | number[]>;
+
+// palette.red is number[], not string | number[]
+// palette.green is string, not string | number[]
+```
+
+## Template Literal Types
+
+```typescript
+type EventName = `on${Capitalize<string>}`;
+// "onClick", "onChange", "onSubmit" etc.
+
+type CSSProperty = `${string}-${string}`;
+```
+
+## Extract and Exclude
+
+```typescript
+type Status = "draft" | "published" | "archived";
+type ActiveStatus = Exclude<Status, "archived">; // "draft" | "published"
+
+type Callbacks = Extract<keyof HTMLElement, `on${string}`>;
+```
+
+## Readonly for Immutable Data
+
+```typescript
+function processConfig(config: Readonly<Config>) {
+  // config.value = "x"; // Error — can't mutate
+}
+```
+
+Use `ReadonlyArray<T>` (or `readonly T[]`) for arrays you shouldn't mutate.
+
+## Infer in Conditional Types
+
+```typescript
+type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+type UnwrapArray<T> = T extends Array<infer U> ? U : T;
+
+type A = UnwrapPromise<Promise<string>>; // string
+type B = UnwrapArray<number[]>;           // number
+```
+
+## Record vs Index Signature
+
+Prefer `Record<K, V>` over `{ [key: string]: V }`:
+
+```typescript
+// Explicit about allowed keys
+type FeatureFlags = Record<"darkMode" | "betaFeatures" | "analytics", boolean>;
+```
+
+## const Assertions
+
+```typescript
+const ROLES = ["admin", "editor", "viewer"] as const;
+type Role = typeof ROLES[number]; // "admin" | "editor" | "viewer"
+```
+
+Without `as const`, TypeScript widens to `string[]`.
+
+---
+
+*This is a working document — updated as I encounter new patterns worth keeping.*

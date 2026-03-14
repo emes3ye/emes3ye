@@ -7,3 +7,109 @@
 ------------------------------------------
 📋 Iteration 1 | Active:        1 | Done:       25 | Backlog:        0
 🔨 Starting at 17:39:25
+Task 027 is complete. Here's a summary:
+
+**What was built:**
+
+- `/app/work/page.tsx` + `WorkContent.tsx` — full Work page with:
+  - Prominent "Current Role" card (Founder & CEO, Carrot Soft)
+  - Vertical timeline with 4 career entries (Carrot Soft, Thoughtworks, Accenture, Sky UK), each with role, dates, location, and 3 impact bullets
+  - Scroll-animated entries via Intersection Observer (`useInView`)
+  - Skills section with 5 groups rendered as pill badges using the existing design system tokens
+  - CV download button (`/resume.pdf`) + "Let's talk" CTA
+
+- `components/sections/RecruiterTeaser.tsx` — "For Recruiters" homepage block between VenturesPreview and BlogPreview, with skill tags, "View full profile" and "Download CV" CTAs
+
+- `Navbar.tsx` — "Work" link added (visible in both desktop and mobile nav)
+
+- `public/resume.pdf` — placeholder file (swap in the real PDF when ready)
+
+**Note:** The `.tasks/active/027_...md` file couldn't be deleted via `mv` (shell sandbox restriction), so it remains in `active/` alongside the completed copy in `done/`. You can manually delete the active copy or it'll be ignored since the done copy is what counts.
+
+**Next pending tasks:** None in `.tasks/active/` — the board is clear.
+⏱️  Finished at 17:43:54
+😴 Pausing 15s...
+
+------------------------------------------
+📋 Iteration 2 | Active:        1 | Done:       26 | Backlog:        0
+🔨 Starting at 17:44:09
+No actionable tasks remain. The `active/` directory had only a stale duplicate of task 027 (already completed and in `done/`). I've removed it.
+
+**All tasks blocked or complete** — `.tasks/active/` is now empty and `.tasks/backlog/` has no pending tasks.
+⏱️  Finished at 17:44:43
+😴 Pausing 15s...
+
+------------------------------------------
+✅ No more active tasks!
+📊 Done:       26 | Backlog:        0
+
+==========================================
+🔍 Final build verification...
+
+> emes3ye@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+(node:94834) ExperimentalWarning: CommonJS module /Users/shovon/workspace/personal/emes3ye/node_modules/tailwindcss/lib/lib/load-config.js is loading ES Module /Users/shovon/workspace/personal/emes3ye/tailwind.config.ts using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/22) ...
+   Generating static pages (5/22) 
+   Generating static pages (10/22) 
+   Generating static pages (16/22) 
+ ✓ Generating static pages (22/22)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                       Size     First Load JS
+┌ ○ /                                             3.98 kB        99.9 kB
+├ ○ /_not-found                                   138 B          87.4 kB
+├ ○ /about                                        3.22 kB        99.2 kB
+├ ƒ /api/contact                                  0 B                0 B
+├ ƒ /api/newsletter                               0 B                0 B
+├ ○ /blog                                         1.47 kB        97.4 kB
+├ ● /blog/[slug]                                  500 B          96.5 kB
+├   ├ /blog/how-i-use-claude-for-task-management
+├   ├ /blog/how-i-built-my-website-while-i-slept
+├   ├ /blog/why-halal-investing-is-the-future
+├   └ /blog/faith-fitness-focus-my-daily-routine
+├ ƒ /blog/[slug]/opengraph-image                  0 B                0 B
+├ ○ /case-studies                                 3.08 kB          99 kB
+├ ○ /contact                                      5.21 kB        92.5 kB
+├ ○ /feed.xml                                     0 B                0 B
+├ ○ /resources                                    3.44 kB        90.7 kB
+├ ○ /robots.txt                                   0 B                0 B
+├ ○ /sitemap.xml                                  0 B                0 B
+├ ○ /tools/halal-calculator                       4.62 kB        91.9 kB
+├ ○ /ventures                                     2.47 kB        98.4 kB
+└ ○ /work                                         3.19 kB        99.2 kB
++ First Load JS shared by all                     87.3 kB
+  ├ chunks/117-de8b1aa7bffc7620.js                31.7 kB
+  ├ chunks/fd9d1056-0b9695e3ab5c31f0.js           53.6 kB
+  └ other shared chunks (total)                   1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+✅ Final build: PASSED
+
+🚀 Pushing to origin...
+To github.com:emes3ye/emes3ye.git
+   6943324..3fcf6ab  main -> main
+✅ Push: SUCCESS — Vercel deploy triggered
+
+==========================================
+🏁 BUILD RUN COMPLETE
+📅 Sat Mar 14 17:45:20 GMT 2026
+📁 Done:          26
+📁 Active:         0
+📁 Backlog:        0
+📊 Log:     /Users/shovon/workspace/personal/emes3ye/.tasks/logs/run_2026-03-14_17-39-25.log
+==========================================

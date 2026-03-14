@@ -1,0 +1,86 @@
+---
+title: "Git Workflows I Use Daily"
+description: "A living collection of git commands and workflows I reach for regularly."
+category: "Tech"
+updatedAt: "2026-03-14"
+---
+
+A living reference for the git patterns I find myself using day to day.
+
+## Interactive Staging
+
+Stage only the hunks you want, not the whole file:
+
+```bash
+git add -p
+```
+
+`y` to stage, `n` to skip, `s` to split a hunk further. Keeps commits focused and reviewable.
+
+## Amend the Last Commit
+
+Fix a typo or forgot to add a file:
+
+```bash
+git commit --amend --no-edit
+```
+
+Only do this before you've pushed. After pushing, you'll need a force-push which is annoying for everyone.
+
+## Undo the Last Commit (Keep Changes)
+
+```bash
+git reset --soft HEAD~1
+```
+
+Changes stay staged. Useful when you committed too early or in the wrong branch.
+
+## Stashing with a Name
+
+```bash
+git stash push -m "WIP: payment form refactor"
+git stash list
+git stash pop stash@{0}
+```
+
+Anonymous stashes are easy to lose track of. Always name them.
+
+## View What Actually Changed
+
+```bash
+git diff HEAD~1..HEAD          # last commit
+git diff main...feature        # changes since branching from main
+git log --oneline --graph      # visual branch history
+```
+
+## Rebase Onto Another Branch
+
+```bash
+git rebase main
+```
+
+I prefer rebase over merge for feature branches — keeps history linear and readable.
+
+## Squash Commits Before Merging
+
+```bash
+git rebase -i HEAD~3
+```
+
+Mark messy WIP commits as `squash` or `fixup`. Write one clean commit message.
+
+## Bisect to Find a Regression
+
+```bash
+git bisect start
+git bisect bad                  # current commit is broken
+git bisect good v1.2.0          # this version worked
+# git tests each midpoint; mark each as good/bad
+git bisect reset
+```
+
+Binary search through commit history. Surprisingly fast for finding the exact commit that broke something.
+
+---
+
+*Last updated: March 2026. Added bisect section.*
