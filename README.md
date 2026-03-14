@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!--
+This repository uses the root README as the GitHub Profile README source
+for https://github.com/emes3ye. Project documentation moved to docs/.
+-->
 
-## Getting Started
+# Shafiul Islam — emes3ye
 
-First, run the development server:
+Building useful software and brands. Founder at Carrot Soft.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Website: https://emes3ye.com
+- Studio: https://carrotsoft.uk
+- LinkedIn: https://linkedin.com/in/emes3ye
+- X / Twitter: https://x.com/emes3ye
+- Email: hello@emes3ye.com
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Featured Work
+- Personal brand site (this repo) — Next.js 14, MDX, Tailwind
+- Carrot Soft — product studio helping founders ship faster
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## GitHub Stats
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=emes3ye&show_icons=true&theme=default)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=emes3ye&layout=compact)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Recent Posts
+- [How I use agentic tasks to ship faster](https://emes3ye.com/blog)  
+  See the latest on emes3ye.com/blog
 
-## Learn More
+## Work With Me
+I help founders move from idea to shipped product.  
+Let’s talk: https://emes3ye.com/contact
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Developer docs for this site live in `docs/`. Start with:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- docs/README.md — Next.js setup and basics
+- CLAUDE.md — architecture, design system, and task flow
