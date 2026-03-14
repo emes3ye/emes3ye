@@ -3,9 +3,14 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — Shafiul Islam",
+  title: "Blog",
   description:
     "Thoughts on halal finance, technology, entrepreneurship, and personal growth.",
+  openGraph: {
+    title: "Blog — Shafiul Islam",
+    description:
+      "Thoughts on halal finance, technology, entrepreneurship, and personal growth.",
+  },
 };
 
 export default function BlogPage() {

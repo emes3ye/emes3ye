@@ -18,9 +18,33 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Shafiul Islam — Entrepreneur, Engineer, Investor",
+  title: {
+    default: "Shafiul Islam — Entrepreneur, Engineer, Investor",
+    template: "%s — Shafiul Islam",
+  },
   description:
     "Shafiul Islam is a halal entrepreneur, software engineer, and investor building purposeful businesses including Carrot Soft and a digital marketing agency.",
+  metadataBase: new URL("https://emes3ye.com"),
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://emes3ye.com",
+    siteName: "Shafiul Islam",
+    title: "Shafiul Islam — Entrepreneur, Engineer, Investor",
+    description:
+      "Halal entrepreneur, software engineer, and investor building purposeful businesses.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@emes3ye",
+    title: "Shafiul Islam — Entrepreneur, Engineer, Investor",
+    description:
+      "Halal entrepreneur, software engineer, and investor building purposeful businesses.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

@@ -33,6 +33,25 @@ body {
   animation: fadeUp 0.8s ease-out forwards;
 }
 
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-up,
+  [class*="transition-"],
+  [class*="duration-"] {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid #2D5A3D;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 /* Blog post prose */
 .blog-prose {
   font-size: 1.125rem;
