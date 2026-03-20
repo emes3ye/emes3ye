@@ -280,6 +280,26 @@ export default function WorkContent() {
           </div>
         </div>
       </FadeIn>
+
+      {/* Recruiter pitch link */}
+      <FadeIn delay={80}>
+        <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/5 p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <div>
+            <p className="text-xs font-heading font-semibold tracking-widest text-accent uppercase mb-1">
+              For Recruiters &amp; Hiring Managers
+            </p>
+            <p className="text-sm text-muted leading-relaxed">
+              Detailed L6 pitch — real impact numbers, flagship projects, LP evidence.
+            </p>
+          </div>
+          <Link
+            href="/open-to-work"
+            className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent text-white text-sm font-heading font-semibold hover:bg-accent/90 transition-colors duration-200"
+          >
+            View full pitch →
+          </Link>
+        </div>
+      </FadeIn>
     </main>
   );
 }
