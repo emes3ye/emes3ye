@@ -15,6 +15,14 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center hero-fade-up">
+        <div className="flex justify-center mb-5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20">
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="text-xs font-heading font-semibold tracking-wide text-accent uppercase">
+              Open to L6 / Staff opportunities
+            </span>
+          </div>
+        </div>
         <h1 className="font-heading font-extrabold text-4xl md:text-6xl lg:text-7xl text-foreground leading-tight text-balance mb-6">
           Building Halal Businesses That Create Purpose-Driven Employment
         </h1>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useInView } from "@/hooks/useInView";
 
-const skills = ["TypeScript", "React", "Next.js", "Node.js", "AWS", "Team leadership"];
+const skills = ["Java", "AWS", "System Design", "SQL", "React", "TypeScript", "Distributed Systems"];
 
 export default function RecruiterTeaser() {
   const { ref, inView } = useInView({ threshold: 0.15 });
@@ -19,15 +19,14 @@ export default function RecruiterTeaser() {
         {/* Left */}
         <div className="max-w-lg">
           <span className="text-xs font-heading font-semibold tracking-widest text-accent uppercase">
-            For Recruiters
+            For Recruiters &amp; Hiring Managers
           </span>
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-foreground mt-3 mb-4 leading-snug">
-            10 years of engineering.<br className="hidden sm:block" /> Now building my own.
+            4+ years at Amazon.<br className="hidden sm:block" /> Building at scale.
           </h2>
           <p className="text-muted text-sm leading-relaxed mb-6">
-            Senior engineer turned founder — ex Thoughtworks, Accenture, Sky UK. I&apos;m
-            selectively open to fractional CTO or advisory roles with mission-aligned
-            companies.
+            Software Development Engineer II at Amazon London — Prime Video FinSys.
+            $7.66B in automated asset management. Exceeds High Bar. Open to L6 / Staff Engineer opportunities.
           </p>
           <ul className="flex flex-wrap gap-2">
             {skills.map((skill) => (
@@ -47,7 +46,7 @@ export default function RecruiterTeaser() {
             href="/work"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-white text-sm font-heading font-semibold hover:bg-accent/90 transition-colors duration-200"
           >
-            View full profile
+            View full profile →
           </Link>
           <a
             href="/resume.pdf"
