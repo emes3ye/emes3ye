@@ -7,3 +7,99 @@
 ------------------------------------------
 📋 Iteration 1 | Active:        1 | Done:       28 | Backlog:        0
 🔨 Starting at 01:43:24
+Task 030 completed. Here's what was done:
+
+**Completed:**
+- **`app/work/WorkContent.tsx`** — Replaced all fake placeholder data (Thoughtworks, Accenture, Sky UK, Carrot Soft) with real Amazon career data: 8 stat cards ($7.66B, $1.6B, $59M, etc.), 4 flagship projects with Outcome + L6 Signal callouts, 7-LP evidence table, real career timeline, "What I'm Looking For" section, and full CTA
+- **`app/work/page.tsx`** — Updated meta title to `"Work & Experience — Shafiul Islam | Software Development Engineer II @ Amazon"`
+- **`app/open-to-work/`** — Deleted entire directory
+- **`next.config.mjs`** — Added permanent 301 redirect from `/open-to-work` → `/work`
+- **`components/sections/RecruiterTeaser.tsx`** — Updated heading to "4+ years at Amazon. Building at scale.", replaced fake company references with real Amazon copy, updated skills pills to Java, AWS, System Design, SQL, React, TypeScript, Distributed Systems
+- **`components/sections/Hero.tsx`** — Added "Open to L6 / Staff opportunities" hero badge with pulsing green dot above the headline (Option A)
+
+**Build:** Passes cleanly with no errors.
+
+**Next task:** No more files in `.tasks/active/` — all tasks are complete or the board is clear.
+⏱️  Finished at 01:47:33
+😴 Pausing 15s...
+
+------------------------------------------
+✅ No more active tasks!
+📊 Done:       29 | Backlog:        0
+
+==========================================
+🔍 Final build verification...
+
+> emes3ye@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+(node:22264) ExperimentalWarning: CommonJS module /Users/shovon/workspace/personal/emes3ye/node_modules/tailwindcss/lib/lib/load-config.js is loading ES Module /Users/shovon/workspace/personal/emes3ye/tailwind.config.ts using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/27) ...
+   Generating static pages (6/27) 
+   Generating static pages (13/27) 
+   Generating static pages (20/27) 
+ ✓ Generating static pages (27/27)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                       Size     First Load JS
+┌ ○ /                                             4 kB            100 kB
+├ ○ /_not-found                                   142 B          87.4 kB
+├ ○ /about                                        3.22 kB        99.2 kB
+├ ƒ /api/contact                                  0 B                0 B
+├ ƒ /api/newsletter                               0 B                0 B
+├ ○ /blog                                         1.47 kB        97.4 kB
+├ ● /blog/[slug]                                  500 B          96.5 kB
+├   ├ /blog/how-i-use-claude-for-task-management
+├   ├ /blog/how-i-built-my-website-while-i-slept
+├   ├ /blog/why-halal-investing-is-the-future
+├   └ /blog/faith-fitness-focus-my-daily-routine
+├ ƒ /blog/[slug]/opengraph-image                  0 B                0 B
+├ ○ /case-studies                                 3.08 kB          99 kB
+├ ○ /contact                                      5.21 kB        92.5 kB
+├ ○ /feed.xml                                     0 B                0 B
+├ ○ /notes                                        142 B          87.4 kB
+├ ● /notes/[...slug]                              1.5 kB         97.5 kB
+├   ├ /notes/cooking/bangladeshi-dal
+├   ├ /notes/productivity/weekly-review
+├   ├ /notes/tech/git-workflows
+├   └ /notes/tech/typescript-tips
+├ ○ /resources                                    3.44 kB        90.7 kB
+├ ○ /robots.txt                                   0 B                0 B
+├ ○ /sitemap.xml                                  0 B                0 B
+├ ○ /tools/halal-calculator                       4.62 kB        91.9 kB
+├ ○ /ventures                                     2.47 kB        98.4 kB
+└ ○ /work                                         4.68 kB         101 kB
++ First Load JS shared by all                     87.3 kB
+  ├ chunks/117-de8b1aa7bffc7620.js                31.7 kB
+  ├ chunks/fd9d1056-0b9695e3ab5c31f0.js           53.6 kB
+  └ other shared chunks (total)                   1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+✅ Final build: PASSED
+
+🚀 Pushing to origin...
+To github.com:emes3ye/emes3ye.git
+   05d063a..9df2da8  main -> main
+✅ Push: SUCCESS — Vercel deploy triggered
+
+==========================================
+🏁 BUILD RUN COMPLETE
+📅 Sat Mar 21 01:48:10 GMT 2026
+📁 Done:          29
+📁 Active:         0
+📁 Backlog:        0
+📊 Log:     /Users/shovon/workspace/personal/emes3ye/.tasks/logs/run_2026-03-21_01-43-24.log
+==========================================

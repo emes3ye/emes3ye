@@ -7,6 +7,11 @@ const nextConfig = {
         destination: "/work",
         permanent: true,
       },
+      {
+        source: "/leetview/privacy-policy",
+        destination: "/products/leetview/privacy-policy",
+        permanent: true,
+      },
     ];
   },
 };
