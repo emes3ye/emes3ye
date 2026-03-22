@@ -162,9 +162,12 @@ export default function WorkContent() {
           </h1>
 
           <p className="text-lg md:text-xl text-muted leading-relaxed max-w-2xl mb-8">
-            I build and own mission-critical financial systems at Amazon scale — billions
-            of dollars, zero major incidents, and a track record of shipping things other
-            engineers said were too complex.
+            I build and own financially critical systems at Amazon scale — billions in
+            licensed asset management automated, billions in payment risk mitigated, and
+            pipelines whose journal entries flow directly into Amazon&apos;s quarterly
+            earnings reports. Zero major incidents. I drive multi-org initiatives from
+            blank page to production, catch security gaps the external red team missed,
+            and deliver 30× performance improvements on inherited broken systems.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -308,7 +311,67 @@ export default function WorkContent() {
         </div>
       </FadeIn>
 
-      {/* ── 7. CTA ───────────────────────────────────────────────────────────── */}
+      {/* ── 7. What I'm Building ─────────────────────────────────────────────── */}
+      <FadeIn>
+        <div className="rounded-2xl border border-foreground/8 bg-foreground/[0.02] p-8 mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+            <h2 className="font-heading font-bold text-xl text-foreground">
+              What I&apos;m Building
+            </h2>
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-1.5 text-sm text-accent font-heading font-semibold hover:gap-2.5 transition-all duration-200"
+            >
+              View all products <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+          <p className="text-sm text-muted leading-relaxed mb-6">
+            I don&apos;t stop at my day job. Outside Amazon I ship real products —
+            because the best engineers build things, not just maintain them.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              {
+                name: "LeetView",
+                desc: "Chrome extension — tracks LeetCode submissions locally, no server, no tracking. Live on the Chrome Web Store.",
+                status: "Live",
+              },
+              {
+                name: "imfluence.co.uk",
+                desc: "Influencer marketing platform for Muslim-friendly brands. Connecting halal brands with aligned creators.",
+                status: "Building",
+              },
+              {
+                name: "Carrot Soft",
+                desc: "Software & digital marketing studio. Helping businesses grow through product and performance.",
+                status: "Active",
+              },
+              {
+                name: "emes3ye.com",
+                desc: "This site — built with Next.js 14, TypeScript, MDX. Designed, written, and shipped by me.",
+                status: "Live",
+              },
+            ].map((product) => (
+              <div
+                key={product.name}
+                className="rounded-xl border border-foreground/8 px-5 py-4"
+              >
+                <div className="flex items-center gap-2 mb-1.5">
+                  <p className="font-heading font-semibold text-sm text-foreground">
+                    {product.name}
+                  </p>
+                  <span className="text-[11px] font-heading font-semibold text-accent bg-accent/10 px-2 py-0.5 rounded-full">
+                    {product.status}
+                  </span>
+                </div>
+                <p className="text-xs text-muted leading-relaxed">{product.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </FadeIn>
+
+      {/* ── 8. CTA ───────────────────────────────────────────────────────────── */}
       <FadeIn delay={80}>
         <div className="rounded-2xl border border-accent/20 bg-accent/5 p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 justify-between">
           <div>
