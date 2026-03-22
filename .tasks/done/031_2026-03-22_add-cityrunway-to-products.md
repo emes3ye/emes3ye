@@ -4,7 +4,7 @@
 - **Phase**: v1
 - **Priority**: p1-high
 - **Created**: 2026-03-22
-- **Completed**: pending
+- **Completed**: 2026-03-22
 - **Depends On**: none
 
 ## Description
@@ -28,7 +28,7 @@ This is indirect monetisation: the tool is free and useful, but every interactio
 
 ## Acceptance Criteria
 
-- [ ] New entry added to the `products` array in `app/products/page.tsx`:
+- [x] New entry added to the `products` array in `app/products/page.tsx`:
   - `slug`: `"cityrunway"`
   - `name`: `"CityRunway"`
   - `tagline`: `"Discover where you can fly from any airport."`
@@ -36,10 +36,10 @@ This is indirect monetisation: the tool is free and useful, but every interactio
   - `status`: `"Live"`
   - `platform`: `"Web App"`
   - `href`: `"https://cityrunway.emes3ye.com"` (external link, new tab)
-- [ ] Card uses `target="_blank"` with `rel="noopener noreferrer"`
-- [ ] CTA reads "Explore destinations ↗" (not "View product →")
-- [ ] Card renders correctly on mobile and desktop
-- [ ] Build passes with `npm run build`
+- [x] Card uses `target="_blank"` with `rel="noopener noreferrer"`
+- [x] CTA reads "Explore destinations ↗" (not "View product →")
+- [x] Card renders correctly on mobile and desktop
+- [x] Build passes with `npm run build`
 
 ## Notes
 
