@@ -55,15 +55,6 @@ export default function PrayerWidget() {
   useEffect(() => {
     let cancelled = false;
 
-    async function fetchByCoords(lat: number, lng: number) {
-      const today = Math.floor(Date.now() / 1000);
-      const url = `https://api.aladhan.com/v1/timings/${today}?latitude=${lat}&longitude=${lng}&method=2`;
-      const res = await fetch(url);
-      if (!res.ok) throw new Error("API error");
-      const data = await res.json();
-      return data.data.timings as ApiTimings;
-    }
-
     async function fetchByCity() {
       const today = Math.floor(Date.now() / 1000);
       const url = `https://api.aladhan.com/v1/timingsByCity/${today}?city=London&country=UK&method=2`;
@@ -75,27 +66,7 @@ export default function PrayerWidget() {
 
     async function load() {
       try {
-        let timings: ApiTimings;
-
-        if ("geolocation" in navigator) {
-          try {
-            const position = await new Promise<GeolocationPosition>(
-              (resolve, reject) =>
-                navigator.geolocation.getCurrentPosition(resolve, reject, {
-                  timeout: 5000,
-                })
-            );
-            timings = await fetchByCoords(
-              position.coords.latitude,
-              position.coords.longitude
-            );
-          } catch {
-            // Geolocation denied or timed out — fall back to London
-            timings = await fetchByCity();
-          }
-        } else {
-          timings = await fetchByCity();
-        }
+        const timings = await fetchByCity();
 
         if (!cancelled) {
           const next = getNextPrayer(timings);
