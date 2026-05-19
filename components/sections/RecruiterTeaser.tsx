@@ -22,11 +22,11 @@ export default function RecruiterTeaser() {
             For Recruiters &amp; Hiring Managers
           </span>
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-foreground mt-3 mb-4 leading-snug">
-            4+ years at Amazon.<br className="hidden sm:block" /> Building at scale.
+            5+ years at Amazon.<br className="hidden sm:block" /> Building at scale.
           </h2>
           <p className="text-muted text-sm leading-relaxed mb-6">
-            Software Development Engineer II at Amazon London — Prime Video FinSys.
-            $7.66B in automated asset management. Exceeds High Bar. Open to L6 / Staff Engineer opportunities.
+            Software Development Engineer II at Amazon London — Prime Video.
+            Billions in licensed asset value automated. Top-tier performance rating. Open to L6 / Staff Engineer opportunities.
           </p>
           <ul className="flex flex-wrap gap-2">
             {skills.map((skill) => (

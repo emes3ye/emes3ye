@@ -6,44 +6,44 @@ import { useInView } from "@/hooks/useInView";
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const stats = [
-  { value: "$7.66B", label: "Total licensed asset value automated (UEL Cap)" },
-  { value: "$1.6B", label: "Payment risk mitigated (India SVOD Iceberg)" },
-  { value: "$59M", label: "GL journal entries automated (TRAM2GL Luna)" },
-  { value: "3,500 hrs", label: "Manual work eliminated (India SVOD Iceberg)" },
-  { value: "30×", label: "Query performance improvement (3 hrs → 6 min)" },
+  { value: "Multi-$B", label: "Licensed asset value managed by systems I own end-to-end" },
+  { value: "$Bn+", label: "International payment risk mitigated via pipelines I designed" },
+  { value: "Multi-$M", label: "GL journal entries automated — flowing into public quarterly earnings" },
+  { value: "Thousands", label: "Manual finance-ops hours eliminated through automation" },
+  { value: "30×", label: "Query performance improvement on an inherited system (3 hrs → 6 min)" },
   { value: "2×", label: "Customer Obsession Award winner" },
   {
-    value: "Exceeds High Bar",
-    label: "Forte rating, 2025 — Amazon's top tier, awarded to <10% of engineers",
+    value: "Top <10%",
+    label: "Performance rating, 2025 — top engineering tier",
   },
-  { value: "504K lines", label: "Code authored in 2025 alone" },
+  { value: "Heavy", label: "Individual delivery volume — sustained high-throughput in 2025" },
 ];
 
 const projects = [
   {
-    title: "UEL Cap Automation — $7.66B scope",
-    what: "Owned the full technical design and delivery of an amortisation cap enforcement system touching 122,000+ run-of-series licences across 5 currencies. Coordinated Accounting, Acquire, Cost Allocator, and PM teams across organisations with VP-level visibility (tracked in Matthias's Asana).",
-    outcome: "$7.66B in licensed asset value now managed automatically; zero major incidents post-launch.",
+    title: "Amortisation cap enforcement at content scale",
+    what: "Owned the technical design and delivery of an enforcement system spanning a six-figure number of run-of-series content licences across multiple currencies. Coordinated Accounting, Acquisitions, Cost Allocation, and PM stakeholders across organisations with VP-level visibility.",
+    outcome: "Multi-billion in licensed asset value now managed automatically; zero major incidents post-launch.",
     signal:
       "Ambiguous, org-wide problem → clear design doc → on-time delivery with full stakeholder alignment.",
   },
   {
-    title: "India SVOD Iceberg — Worldwide First, $1.6B risk",
-    what: "Designed and delivered the first-ever India SVOD payment pipeline through Amazon's Iceberg system. Worked directly with Prime Video Business, Finance, Legal, and Accounting teams across time zones.",
-    outcome: "Eliminated ~3,500 manual processing hours; $1.6B in payment risk now correctly managed.",
+    title: "International SVOD payment pipeline — first of its kind",
+    what: "Designed and delivered a first-of-its-kind international SVOD payment pipeline. Worked directly with Prime Video Business, Finance, Legal, and Accounting teams across time zones.",
+    outcome: "Thousands of manual processing hours eliminated; billions in payment risk now correctly managed.",
     signal:
       "Cross-org initiative with no playbook — drove it from blank page to production.",
   },
   {
-    title: "Security Bug — Found What the Red Team Missed",
-    what: "During TRAM Access Control Enhancement, identified a product-line-specific edit access vulnerability that the FORI OS Red Team (external security audit) had not caught. Proactively flagged and fixed; acknowledged by VP-level Accounting leadership.",
+    title: "Security gap caught beyond external audit",
+    what: "While delivering an access control enhancement, identified a product-line-specific edit access vulnerability that an external red-team security audit had missed. Proactively flagged and fixed; acknowledged at the VP level.",
     outcome: "Security gap closed before it reached production; trust established with senior leadership.",
     signal:
       "Ownership beyond scope, security judgment, and proactive stakeholder communication.",
   },
   {
-    title: "A3P3 Lambda — 30× Performance",
-    what: "Inherited a broken reconciliation alarm (failing since August 2024). Diagnosed root cause: 448 DB round-trips per run. Refactored to batch queries and migrated to Redshift SPECTRUM.",
+    title: "Reconciliation pipeline — 30× performance",
+    what: "Inherited a long-broken reconciliation alarm. Diagnosed the root cause — hundreds of DB round-trips per run — refactored to batched queries, and migrated to a federated query engine for scale.",
     outcome: "Runtime reduced from 3 hours to 6 minutes — a 30× improvement.",
     signal:
       "No one asked — took it on, fixed the underlying architecture, not just the symptom.",
@@ -54,37 +54,37 @@ const lps = [
   {
     principle: "Customer Obsession",
     evidence:
-      "Won Q4 2024 + Q1 2025 FinSys Empty Chair Award; released TRAM Access Control ahead of schedule for accounting stakeholders.",
+      "Two-time Customer Obsession Award winner from finance stakeholders; consistently shipped ahead of schedule for accounting partners.",
   },
   {
     principle: "Ownership",
     evidence:
-      "Drove UEL Cap solo while team lead was OOO; owned Sev-2 response for 188 delayed partner payments (37 contracts, 182 resolved).",
+      "Drove a billion-dollar amortisation programme solo through a team-lead absence; owned Sev-2 response for a partner-payment delay incident affecting dozens of contracts.",
   },
   {
     principle: "Invent & Simplify",
     evidence:
-      "Built automated email notifications for amortisation template changes on own initiative — no one asked.",
+      "Built an automated notification pipeline for finance template changes on my own initiative — no one asked.",
   },
   {
     principle: "Are Right, A Lot",
     evidence:
-      "Pushed back on SNS/Salesforce integration proposal — identified 2/3 of fields were missing or wrong before external team set the wrong direction; wrote full technical assessment.",
+      "Pushed back on a proposed downstream integration after identifying that most required fields were missing or wrong; wrote a full technical assessment that prevented a misaligned build.",
   },
   {
     principle: "Dive Deep",
     evidence:
-      "Diagnosed Hibernate flush-order race condition only visible outside debug mode; diagnosed n+1 join outage; traced Redshift IAM + DATASHARE → SPECTRUM migration path.",
+      "Diagnosed a Hibernate flush-order race condition only reproducible outside debug mode; resolved an n+1 join production outage; designed a federated-query migration path from a constrained warehouse.",
   },
   {
     principle: "Deliver Results",
     evidence:
-      "Exceeds High Bar performance rating; 250 code changes + 504K LOC in 2025; all major projects shipped on time.",
+      "Top-tier annual performance rating; high individual delivery volume sustained across the year; all major projects shipped on time.",
   },
   {
     principle: "Raise the Bar",
     evidence:
-      "Certified Amazon interviewer (6+ loops); selected as FinSys AI Bar Raiser to drive AI-Native adoption across the team.",
+      "Certified interviewer (multiple loops); selected as an internal AI Bar Raiser driving AI-native adoption across the team.",
   },
 ];
 
@@ -107,7 +107,7 @@ const timeline = [
   },
   {
     year: "2021–Present",
-    desc: "Amazon London — SDE II, Prime Video FinSys. Financial systems at global scale.",
+    desc: "Amazon London — SDE II, Prime Video. Financial systems at global scale (5+ years).",
   },
   {
     year: "2025–Present",
@@ -158,16 +158,16 @@ export default function WorkContent() {
           <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
             Software Development<br className="hidden sm:block" /> Engineer II @ Amazon
             <br className="hidden sm:block" />
-            <span className="text-accent">4+ years.</span>
+            <span className="text-accent">5+ years.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted leading-relaxed max-w-2xl mb-8">
             I build and own financially critical systems at Amazon scale — billions in
-            licensed asset management automated, billions in payment risk mitigated, and
-            pipelines whose journal entries flow directly into Amazon&apos;s quarterly
-            earnings reports. Zero major incidents. I drive multi-org initiatives from
-            blank page to production, catch security gaps the external red team missed,
-            and deliver 30× performance improvements on inherited broken systems.
+            licensed asset value automated, billions in payment risk mitigated, and
+            pipelines whose journal entries flow into public quarterly earnings. Zero
+            major incidents. I drive multi-org initiatives from blank page to production,
+            catch security gaps that external audits missed, and deliver 30× performance
+            improvements on inherited broken systems.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -194,7 +194,7 @@ export default function WorkContent() {
         <h2 className="font-heading font-bold text-2xl md:text-3xl text-foreground mb-2">
           By the Numbers
         </h2>
-        <p className="text-muted text-sm mb-8">Impact at a glance — all figures from internal Amazon records.</p>
+        <p className="text-muted text-sm mb-8">Impact at a glance — scope generalised; exact figures available under NDA.</p>
       </FadeIn>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">

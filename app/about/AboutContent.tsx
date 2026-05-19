@@ -88,7 +88,7 @@ export default function AboutContent() {
             That tension became my fuel.
           </p>
           <p>
-            For over eight years, I&apos;ve been a software engineer at Amazon,
+            For over five years, I&apos;ve been a software engineer at Amazon,
             designing scalable systems and leading cross-team initiatives that
             serve millions of customers. The experience taught me rigour,
             ownership, and the power of long-term thinking. But the corporate
