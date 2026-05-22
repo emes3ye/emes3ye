@@ -14,8 +14,8 @@ const subjects = [
 const contactLinks = [
   {
     label: "Email",
-    value: "hello@emes3ye.com",
-    href: "mailto:hello@emes3ye.com",
+    value: "emes3ye@gmail.com",
+    href: "mailto:emes3ye@gmail.com",
   },
   {
     label: "LinkedIn",

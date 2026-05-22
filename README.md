@@ -16,7 +16,7 @@ No VC. No shortcuts. Just execution.
 [![Carrot Soft](https://img.shields.io/badge/carrotsoft.uk-C8956C?style=flat-square&logo=safari&logoColor=white)](https://carrotsoft.uk)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/emes3ye)
 [![X](https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/emes3ye)
-[![Email](https://img.shields.io/badge/hello@emes3ye.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hello@emes3ye.com)
+[![Email](https://img.shields.io/badge/emes3ye@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:emes3ye@gmail.com)
 
 ![Profile Views](https://komarev.com/ghpvc/?username=emes3ye&style=flat-square&color=2D5A3D)
 ![GitHub followers](https://img.shields.io/github/followers/emes3ye?style=flat-square&color=2D5A3D)

@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: "hello@emes3ye.com",
+      to: "emes3ye@gmail.com",
       replyTo: email,
       subject: subject ? `[Contact] ${subject}` : `[Contact] Message from ${name}`,
       html: `
