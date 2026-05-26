@@ -5,6 +5,7 @@ const socialLinks = [
   { href: "https://linkedin.com/in/emes3ye", label: "LinkedIn" },
   { href: "https://x.com/emes3ye", label: "X / Twitter" },
   { href: "https://github.com/emes3ye", label: "GitHub" },
+  { href: "https://www.buymeacoffee.com/emes3ye", label: "Buy me a coffee" },
 ];
 
 export default function Footer() {

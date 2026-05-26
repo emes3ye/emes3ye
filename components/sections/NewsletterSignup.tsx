@@ -74,10 +74,10 @@ export default function NewsletterSignup() {
       ) : (
         <>
           <p className="font-heading font-bold text-foreground text-xl md:text-2xl mb-1">
-            Stay in the loop
+            Follow the Noorkin build journey
           </p>
           <p className="text-muted text-sm mb-6">
-            Occasional thoughts on halal finance, tech, and building things that matter. No spam.
+            Get updates on Noorlock, new Noorkin products, and lessons from building subscription software. No spam.
           </p>
           <form onSubmit={handleSubmit} noValidate>
             <div className="flex flex-col sm:flex-row gap-3">

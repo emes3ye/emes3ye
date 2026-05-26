@@ -24,22 +24,31 @@ export default function Hero() {
           </div>
         </div>
         <h1 className="font-heading font-extrabold text-4xl md:text-6xl lg:text-7xl text-foreground leading-tight text-balance mb-6">
-          Building Halal Businesses That Create Purpose-Driven Employment
+          Building Software, Products, and Halal Businesses With Purpose
         </h1>
         <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto mb-10 text-balance">
-          Entrepreneur. Software Engineer. Halal Investor. Helping people solve
-          financial barriers so they can focus on what truly matters.
+          Entrepreneur. Software Engineer. Halal Investor. Currently focused on
+          Noorkin — a product studio creating subscription tools for intentional
+          digital living.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/ventures"
+          <a
+            href="https://www.noorkin.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-accent text-white font-heading font-semibold text-sm tracking-wide hover:bg-accent/90 transition-colors duration-200"
           >
-            Explore My Ventures
+            Explore Noorkin ↗
+          </a>
+          <Link
+            href="/ventures"
+            className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-accent text-accent font-heading font-semibold text-sm tracking-wide hover:bg-accent hover:text-white transition-colors duration-200"
+          >
+            View Ventures
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-accent text-accent font-heading font-semibold text-sm tracking-wide hover:bg-accent hover:text-white transition-colors duration-200"
+            className="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-accent font-heading font-semibold text-sm tracking-wide hover:text-foreground transition-colors duration-200"
           >
             Get In Touch
           </Link>

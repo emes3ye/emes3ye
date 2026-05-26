@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import BlogPostContent from "./BlogPostContent";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
+import SupportCTA from "@/components/ui/SupportCTA";
 
 type Props = {
   params: { slug: string };
@@ -84,6 +85,10 @@ export default function BlogPostPage({ params }: Props) {
 
       {/* MDX content */}
       <BlogPostContent content={post.content} />
+
+      <div className="mt-14">
+        <SupportCTA compact />
+      </div>
     </div>
     </>
   );

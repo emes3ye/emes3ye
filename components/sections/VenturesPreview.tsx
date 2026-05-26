@@ -6,18 +6,18 @@ import { useInView } from "@/hooks/useInView";
 const ventures = [
   {
     number: "01",
-    name: "Carrot Soft",
+    name: "Noorkin",
     description:
-      "A bootstrap software company delivering digital solutions for businesses ready to scale.",
-    href: "https://carrotsoft.uk",
+      "The main focus: subscription products for intentional living, starting with Noorlock.",
+    href: "https://www.noorkin.dev/",
     external: true,
   },
   {
     number: "02",
-    name: "Noorkin",
+    name: "Carrot Soft",
     description:
-      "A product studio launching focused apps and extensions for intentional living, starting with Noorlock.",
-    href: "https://www.noorkin.dev/",
+      "A bootstrap software company delivering digital solutions for businesses ready to scale.",
+    href: "https://carrotsoft.uk",
     external: true,
   },
   {

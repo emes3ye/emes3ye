@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SupportCTA from "@/components/ui/SupportCTA";
 
 export const metadata: Metadata = {
   title: "Products — Shafiul Islam",
   description:
-    "Tools and extensions built by Shafiul Islam. Practical software that solves real problems.",
+    "Subscription products, apps, and extensions built by Shafiul Islam and the Noorkin team.",
   openGraph: {
     title: "Products — Shafiul Islam",
     description:
-      "Tools and extensions built by Shafiul Islam. Practical software that solves real problems.",
+      "Subscription products, apps, and extensions built by Shafiul Islam and the Noorkin team.",
   },
 };
 
@@ -59,15 +60,54 @@ export default function ProductsPage() {
           Products
         </p>
         <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-foreground mb-5">
-          Things I&apos;ve built
+          Products I&apos;m building into sustainable businesses
         </h1>
-        <p className="text-muted text-lg max-w-xl leading-relaxed">
-          Practical tools, apps, and extensions I&apos;ve shipped — including new
-          products launching under Noorkin.
+        <p className="text-muted text-lg max-w-2xl leading-relaxed">
+          Apps, extensions, and tools designed to solve real problems — with
+          Noorkin focused on subscription-based products that can earn recurring
+          monthly revenue by delivering recurring value.
         </p>
       </div>
 
-      <div className="grid gap-6">
+      <div className="rounded-3xl border border-accent/20 bg-accent/[0.03] p-8 md:p-10 mb-8">
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-8">
+          <div>
+            <p className="font-heading font-semibold text-accent text-sm tracking-widest uppercase mb-3">
+              Flagship Noorkin Product
+            </p>
+            <h2 className="font-heading font-extrabold text-3xl text-foreground mb-3">
+              Noorlock
+            </h2>
+            <p className="text-muted leading-relaxed max-w-2xl mb-6">
+              Android, iOS, and browser extension tools to block short-form video
+              feeds before they steal your attention. Built as the first Noorkin
+              subscription product for intentional digital living.
+            </p>
+            <div className="flex flex-wrap gap-2 text-xs text-muted">
+              {[
+                "Android",
+                "iOS",
+                "Browser Extension",
+                "Subscription-focused",
+              ].map((item) => (
+                <span key={item} className="px-3 py-1.5 rounded-full bg-background border border-black/5 dark:border-white/5">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+          <a
+            href="https://www.noorkin.dev/products/noorlock"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-accent text-white font-heading font-semibold text-sm hover:bg-accent/90 transition-colors duration-200 shrink-0"
+          >
+            Try Noorlock ↗
+          </a>
+        </div>
+      </div>
+
+      <div className="grid gap-6 mb-8">
         {products.map((product) => {
           const cardClass =
             "group block border border-black/8 dark:border-white/8 rounded-2xl p-8 hover:border-accent/30 hover:bg-accent/[0.02] transition-all duration-300";
@@ -118,6 +158,8 @@ export default function ProductsPage() {
           );
         })}
       </div>
+
+      <SupportCTA />
     </div>
   );
 }

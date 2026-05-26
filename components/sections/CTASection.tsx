@@ -14,18 +14,28 @@ export default function CTASection() {
         }`}
       >
         <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-6 text-balance">
-          Let&apos;s Build Something Meaningful Together
+          Follow along as we build Noorkin.
         </h2>
         <p className="text-white/80 text-lg max-w-2xl mx-auto mb-10 text-balance">
-          Whether you&apos;re looking for a tech partner, investment opportunity,
-          or just want to connect — I&apos;d love to hear from you.
+          We&apos;re launching subscription products that help people live and work
+          with more intention — starting with Noorlock.
         </p>
-        <Link
-          href="/contact"
-          className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white text-accent font-heading font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors duration-200"
-        >
-          Start a Conversation
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="https://www.noorkin.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white text-accent font-heading font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors duration-200"
+          >
+            Visit Noorkin ↗
+          </a>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-white/40 text-white font-heading font-semibold text-sm tracking-wide hover:bg-white hover:text-accent transition-colors duration-200"
+          >
+            Start a Conversation
+          </Link>
+        </div>
       </div>
     </section>
   );

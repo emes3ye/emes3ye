@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import AboutPreview from "@/components/sections/AboutPreview";
 import VenturesPreview from "@/components/sections/VenturesPreview";
+import NoorkinFocus from "@/components/sections/NoorkinFocus";
 import BlogPreview from "@/components/sections/BlogPreview";
 import RecruiterTeaser from "@/components/sections/RecruiterTeaser";
 import NewsletterSignup from "@/components/sections/NewsletterSignup";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <NoorkinFocus />
       <AboutPreview />
       <VenturesPreview />
       <RecruiterTeaser />

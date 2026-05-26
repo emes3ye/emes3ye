@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useInView } from "@/hooks/useInView";
+import SupportCTA from "@/components/ui/SupportCTA";
 
 type Status = "Active" | "Launching" | "Investing" | "Growing";
 
@@ -14,7 +15,24 @@ const statusStyles: Record<Status, string> = {
 
 const ventures = [
   {
+    category: "Product Studios",
     number: "01",
+    name: "Noorkin",
+    status: "Launching" as Status,
+    href: "https://www.noorkin.dev/",
+    description:
+      "A product studio building focused apps and extensions for intentional living. Noorkin is our main commercial focus: a home for subscription products that solve recurring problems and create sustainable monthly income.",
+    details: [
+      "Noorlock — Android, iOS, and browser extension to block short-form videos",
+      "Multiple products launching under the Noorkin brand",
+      "Subscription-first products with recurring value",
+      "Built by me and the team for digital discipline and mindful usage",
+    ],
+    label: "Products",
+  },
+  {
+    category: "Product Studios",
+    number: "02",
     name: "Carrot Soft",
     status: "Active" as Status,
     href: "https://carrotsoft.uk",
@@ -29,21 +47,7 @@ const ventures = [
     label: "In-house products",
   },
   {
-    number: "02",
-    name: "Noorkin",
-    status: "Launching" as Status,
-    href: "https://www.noorkin.dev/",
-    description:
-      "A product studio building focused apps and extensions for intentional living. Noorkin is where I launch multiple small, practical products that help people use technology with discipline instead of distraction.",
-    details: [
-      "Noorlock — Android, iOS, and browser extension to block short-form videos",
-      "Multiple products launching under the Noorkin brand",
-      "Built for digital discipline and mindful usage",
-      "Small, focused tools shipped quickly",
-    ],
-    label: "Products",
-  },
-  {
+    category: "Service Businesses",
     number: "03",
     name: "Digital Marketing Agency",
     status: "Active" as Status,
@@ -54,6 +58,7 @@ const ventures = [
     label: "Services",
   },
   {
+    category: "Investments",
     number: "04",
     name: "Restaurant Investments",
     status: "Investing" as Status,
@@ -69,6 +74,7 @@ const ventures = [
     label: "Investment principles",
   },
   {
+    category: "Investments",
     number: "05",
     name: "Rent to Rent Property",
     status: "Growing" as Status,
@@ -84,6 +90,8 @@ const ventures = [
     label: "Portfolio focus",
   },
 ];
+
+const ventureCategories = ["Product Studios", "Service Businesses", "Investments"] as const;
 
 function VentureSection({
   venture,
@@ -196,9 +204,37 @@ export default function VenturesContent() {
       </div>
 
       {/* Venture sections */}
-      {ventures.map((venture, i) => (
-        <VentureSection key={venture.number} venture={venture} index={i} />
-      ))}
+      {ventureCategories.map((category) => {
+        const categoryVentures = ventures.filter(
+          (venture) => venture.category === category
+        );
+
+        return (
+          <div key={category} className="border-t border-black/5 pt-12 first:border-t-0 first:pt-0">
+            <p className="font-heading font-semibold text-accent text-sm tracking-widest uppercase mb-2">
+              {category}
+            </p>
+            {category === "Product Studios" && (
+              <p className="text-muted max-w-2xl mb-4">
+                Noorkin is the primary focus: small subscription products with
+                recurring value, backed by the craft and execution discipline I
+                developed through Carrot Soft.
+              </p>
+            )}
+            {categoryVentures.map((venture) => (
+              <VentureSection
+                key={venture.number}
+                venture={venture}
+                index={ventures.findIndex((item) => item.number === venture.number)}
+              />
+            ))}
+          </div>
+        );
+      })}
+
+      <div className="border-t border-black/5 pt-12 mb-12">
+        <SupportCTA />
+      </div>
 
       {/* Contact CTA */}
       <div className="border-t border-black/5 pt-20 text-center">
