@@ -14,6 +14,14 @@ const ventures = [
   },
   {
     number: "02",
+    name: "Noorkin",
+    description:
+      "A product studio launching focused apps and extensions for intentional living, starting with Noorlock.",
+    href: "https://www.noorkin.dev/",
+    external: true,
+  },
+  {
+    number: "03",
     name: "Digital Marketing Agency",
     description:
       "Helping brands grow their online presence with data-driven strategies and authentic storytelling.",
@@ -21,7 +29,7 @@ const ventures = [
     external: false,
   },
   {
-    number: "03",
+    number: "04",
     name: "Restaurant Investments",
     description:
       "Investing in halal food businesses that serve communities with quality and integrity.",
@@ -29,7 +37,7 @@ const ventures = [
     external: false,
   },
   {
-    number: "04",
+    number: "05",
     name: "Rent to Rent Property",
     description:
       "Building a property portfolio that generates sustainable, halal income streams.",

@@ -106,9 +106,20 @@ export default function AboutContent() {
             </a>{" "}
             to prove that bootstrapped software companies can compete with
             anyone. No VC, no compromise, just building products that solve real
-            problems. Alongside that, I&apos;ve been investing in halal food
-            businesses and building a rent-to-rent property portfolio —
-            generating income streams that are clean, ethical, and scalable.
+            problems. I&apos;m also launching products under{" "}
+            <a
+              href="https://www.noorkin.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent underline underline-offset-2"
+            >
+              Noorkin
+            </a>
+            , starting with Noorlock — Android, iOS, and browser extension tools
+            to block short-form videos and protect focus. Alongside that,
+            I&apos;ve been investing in halal food businesses and building a
+            rent-to-rent property portfolio — generating income streams that are
+            clean, ethical, and scalable.
           </p>
           <p>
             My vision is simple: create enough halal employment that people

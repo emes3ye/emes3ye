@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { useInView } from "@/hooks/useInView";
 
-type Status = "Active" | "Investing" | "Growing";
+type Status = "Active" | "Launching" | "Investing" | "Growing";
 
 const statusStyles: Record<Status, string> = {
   Active: "bg-accent/10 text-accent",
+  Launching: "bg-secondary/10 text-secondary",
   Investing: "bg-secondary/10 text-secondary",
   Growing: "bg-muted/10 text-muted",
 };
@@ -29,6 +30,21 @@ const ventures = [
   },
   {
     number: "02",
+    name: "Noorkin",
+    status: "Launching" as Status,
+    href: "https://www.noorkin.dev/",
+    description:
+      "A product studio building focused apps and extensions for intentional living. Noorkin is where I launch multiple small, practical products that help people use technology with discipline instead of distraction.",
+    details: [
+      "Noorlock — Android, iOS, and browser extension to block short-form videos",
+      "Multiple products launching under the Noorkin brand",
+      "Built for digital discipline and mindful usage",
+      "Small, focused tools shipped quickly",
+    ],
+    label: "Products",
+  },
+  {
+    number: "03",
     name: "Digital Marketing Agency",
     status: "Active" as Status,
     href: null,
@@ -38,7 +54,7 @@ const ventures = [
     label: "Services",
   },
   {
-    number: "03",
+    number: "04",
     name: "Restaurant Investments",
     status: "Investing" as Status,
     href: null,
@@ -53,7 +69,7 @@ const ventures = [
     label: "Investment principles",
   },
   {
-    number: "04",
+    number: "05",
     name: "Rent to Rent Property",
     status: "Growing" as Status,
     href: null,

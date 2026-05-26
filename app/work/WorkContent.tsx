@@ -332,14 +332,14 @@ export default function WorkContent() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               {
+                name: "Noorlock",
+                desc: "Noorkin product — Android, iOS app, and browser extension to block addictive short-form video feeds.",
+                status: "Launching",
+              },
+              {
                 name: "LeetView",
                 desc: "Chrome extension — tracks LeetCode submissions locally, no server, no tracking. Live on the Chrome Web Store.",
                 status: "Live",
-              },
-              {
-                name: "imfluence.co.uk",
-                desc: "Influencer marketing platform for Muslim-friendly brands. Connecting halal brands with aligned creators.",
-                status: "Building",
               },
               {
                 name: "Carrot Soft",

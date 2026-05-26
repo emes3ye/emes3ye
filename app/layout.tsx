@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s — Shafiul Islam",
   },
   description:
-    "Shafiul Islam is a halal entrepreneur, software engineer, and investor building purposeful businesses including Carrot Soft and a digital marketing agency.",
+    "Shafiul Islam is a halal entrepreneur, software engineer, and investor building purposeful businesses including Carrot Soft, Noorkin, and a digital marketing agency.",
   metadataBase: new URL("https://emes3ye.com"),
   openGraph: {
     type: "website",

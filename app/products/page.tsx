@@ -14,6 +14,18 @@ export const metadata: Metadata = {
 
 const products = [
   {
+    slug: "noorlock",
+    name: "Noorlock",
+    tagline: "Block short-form videos before they steal your day.",
+    description:
+      "The first product from Noorkin — an Android app, iOS app, and browser extension designed to block addictive short-form video feeds and help you use the internet with intention.",
+    status: "Launching",
+    platform: "Android · iOS · Browser Extension",
+    href: "https://www.noorkin.dev/products/noorlock",
+    cta: "View Noorlock ↗",
+    external: true,
+  },
+  {
     slug: "leetview",
     name: "LeetView",
     tagline: "Track your LeetCode grind — privately.",
@@ -50,8 +62,8 @@ export default function ProductsPage() {
           Things I&apos;ve built
         </h1>
         <p className="text-muted text-lg max-w-xl leading-relaxed">
-          Practical tools and extensions I&apos;ve shipped. Each one solves a
-          specific problem I ran into personally.
+          Practical tools, apps, and extensions I&apos;ve shipped — including new
+          products launching under Noorkin.
         </p>
       </div>
 

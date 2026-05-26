@@ -21,9 +21,9 @@ export default function AboutPreview() {
           </h2>
           <p className="text-muted text-lg leading-relaxed mb-8">
             I&apos;m Shafiul Islam — a tenured software engineer at Amazon with
-            8+ years of experience, founder of Carrot Soft, and a halal investor
-            building businesses rooted in Islamic principles. From restaurants to
-            rent-to-rent properties to digital marketing, I believe in creating
+            8+ years of experience, founder of Carrot Soft and Noorkin, and a
+            halal investor building businesses rooted in Islamic principles. From
+            products to restaurants, rent-to-rent properties, and digital marketing, I believe in creating
             opportunities that empower people financially so they can pursue
             their true purpose. Every day, I strive to be a better version of
             myself.

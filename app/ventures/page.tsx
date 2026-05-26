@@ -4,11 +4,11 @@ import VenturesContent from "./VenturesContent";
 export const metadata: Metadata = {
   title: "Ventures",
   description:
-    "Explore the ventures and investments of Shafiul Islam — from Carrot Soft to halal property and restaurant investments.",
+    "Explore the ventures and investments of Shafiul Islam — from Carrot Soft and Noorkin to halal property and restaurant investments.",
   openGraph: {
     title: "Ventures — Shafiul Islam",
     description:
-      "Explore the ventures and investments of Shafiul Islam — from Carrot Soft to halal property and restaurant investments.",
+      "Explore the ventures and investments of Shafiul Islam — from Carrot Soft and Noorkin to halal property and restaurant investments.",
   },
 };
 
